@@ -12,7 +12,7 @@ var walk_speed = 5
 var run_speed = 10
 var acceleration = 6
 var angular_acceleration = 7 
-
+var push = 2
 
 func _physics_process(delta):
 	# Själva rörelsekoden. Inte 100 på att höger och vänster mm egentligen är rätt anpassat. Kan vara så att själva lvl är spegelvänd
@@ -34,17 +34,22 @@ func _physics_process(delta):
 	velocity = lerp(velocity,direction * movement_speed, delta * acceleration)
 		
 		#Tror den gjorde hunden mer flytade när den byter riktning. 
-	move_and_slide(velocity + Vector3.UP * vertical_velocity, Vector3.UP)
+	move_and_slide(velocity + Vector3.UP * vertical_velocity, Vector3.UP,false,4,0.785398,false)
+	
+	for index in get_slide_count():
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("bodies"):
+			collision.collider.apply_central_impulse(-collision.normal * push)
 	
 	#Fixar gravitation i spelet. 
 	if !is_on_floor():
 		vertical_velocity -= gravity * delta
-	else:
-		vertical_velocity = 0
+	#else:
+	#	vertical_velocity = 0
 		
 		#Mekanismen för att hoppa.
 	if is_on_floor():
-		if Input.is_action_pressed("jump"):
+		if Input.is_action_just_pressed("jump"):
 			vertical_velocity = jump_magnitude
 		
 		#Gör att hundens "Mesh" roterar. Så att den tittar åt det håll man går. 
