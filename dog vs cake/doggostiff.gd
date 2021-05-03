@@ -1,5 +1,5 @@
 extends KinematicBody
-# Variabler för resten av koden
+# Vanliga variabler
 var direction = Vector3.FORWARD
 var velocity = Vector3.ZERO
 
@@ -17,16 +17,18 @@ var push = 2
 var weapon_to_spawn
 var weapon_to_drop
 
+#Konstiga variabler
 onready var head = $head
 onready var camera = $head/Camera
-onready var reach = $head/Camera/reach
-onready var hand = $head/hand
+onready var reach = $doggo/reach
+onready var hand = $doggo/hand
 
 onready var gun_a_hr = preload("res://gun A HR.tscn")
 onready var gun_a = preload("res://gun A.tscn")
 onready var gun_b_hr = preload("res://gun B HR.tscn")
 onready var gun_b = preload("res://gun B.tscn")
 
+#Koden för att kolla om du kan greppa saker
 func _process(delta):
 	if reach.is_colliding():
 		if reach.get_collider().get_name() == "gun A":
@@ -46,6 +48,7 @@ func _process(delta):
 	else: 
 		weapon_to_drop = null
 		
+		#koden som gör att du greppar saker
 	if Input.is_action_just_pressed("grab"):
 		if weapon_to_spawn != null:
 			if hand.get_child(0) != null:
@@ -56,13 +59,11 @@ func _process(delta):
 			reach.get_collider().queue_free()
 			hand.add_child(weapon_to_spawn)
 			weapon_to_spawn.rotation = hand.rotation
-
-	
-	
-	
+			
 		
 func _physics_process(delta):
-	# Själva rörelsekoden. Inte 100 på att höger och vänster mm egentligen är rätt anpassat. Kan vara så att själva lvl är spegelvänd
+	
+	# Själva rörelsekoden. 
 	if Input.is_action_pressed("ui_up") || Input.is_action_pressed("ui_down") || Input.is_action_pressed("ui_right") || Input.is_action_pressed("ui_left"):
 		
 		direction = Vector3(Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
