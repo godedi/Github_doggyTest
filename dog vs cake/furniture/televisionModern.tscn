@@ -37,6 +37,7 @@ extents = Vector3( 0.330335, 0.225144, 0.0266334 )
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 
 [node name="televisionModernClone" type="MeshInstance" parent="."]
+transform = Transform( 1.84391, 0, 0, 0, 1.90829, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 material/1 = null

@@ -1,13 +1,16 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://doggostiff.tscn" type="PackedScene" id=2]
-[ext_resource path="res://gun B.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cake.tscn" type="PackedScene" id=3]
 [ext_resource path="res://möbler/GLTF format/wood.material" type="Material" id=4]
 [ext_resource path="res://furniture/sofa.tscn" type="PackedScene" id=5]
 [ext_resource path="res://furniture/tableCoffee.tscn" type="PackedScene" id=6]
 [ext_resource path="res://furniture/televisionModern.tscn" type="PackedScene" id=7]
 [ext_resource path="res://furniture/rugRound.tscn" type="PackedScene" id=8]
+[ext_resource path="res://furniture/kitchenStove.tscn" type="PackedScene" id=9]
+[ext_resource path="res://obejects att greppa/låda.tscn" type="PackedScene" id=10]
+[ext_resource path="res://obejects att greppa/låda.gd" type="Script" id=11]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 15 )
@@ -19,14 +22,14 @@ albedo_color = Color( 0.521569, 0.509804, 0.509804, 1 )
 material = SubResource( 2 )
 size = Vector3( 30, 2, 30 )
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.301961, 0.203922, 0.0156863, 1 )
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=5]
 
-[sub_resource type="CubeMesh" id=5]
+[sub_resource type="CubeMesh" id=6]
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.0862745, 0.301961, 0.0431373, 1 )
 
 [node name="Level" type="Spatial"]
@@ -105,7 +108,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.3439, 3.4358, -6.23666 )
 width = 17.1589
 height = 6.21341
 depth = 14.4308
-material = SubResource( 7 )
+material = SubResource( 4 )
 
 [node name="tvtable" type="CSGBox" parent="CSGCombiner"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.238, 1.13997, -32.0557 )
@@ -114,15 +117,44 @@ height = 4.12515
 depth = 14.4308
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 4.6932, 0, 0, 0, 0.325196, 0, 0, 0, 4.49797, -10.3834, 4.82995, -30.3546 )
+transform = Transform( 4.6932, 0, 0, 0, 0.325196, 0, 0, 0, 4.49797, -5.23129, 5.30661, 0.199609 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
-mesh = SubResource( 5 )
-material/0 = SubResource( 6 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 4.6932, 0, 0, 0, 0.325196, 0, 0, 0, 4.49797, -5.23129, 8.82369, -6.11473 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+shape = SubResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody3" type="StaticBody" parent="."]
+transform = Transform( 4.6932, 0, 0, 0, 0.325196, 0, 0, 0, 4.49797, -5.23129, 12.3787, -13.6679 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+shape = SubResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="StaticBody4" type="StaticBody" parent="."]
+transform = Transform( 4.6932, 0, 0, 0, 0.325196, 0, 0, 0, 4.49797, -42.5632, 13.4948, -19.4568 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
+shape = SubResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody4"]
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.387015, -0.459645, -0.799341, -0.586241, -0.791785, 0.171462, -0.711717, 0.402248, -0.575895, -48.9528, 16.8762, -8.50974 )
@@ -131,11 +163,8 @@ light_color = Color( 0.886275, 0.811765, 0.658824, 1 )
 [node name="dog" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.95015, 1.83868, 6.80245 )
 
-[node name="gun B" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.86206, 1, -0.948162 )
-
 [node name="gun A" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2107, 2.8348, -21.2817 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6713, 3.90185, -19.8956 )
 
 [node name="loungeDesignSofa" parent="." instance=ExtResource( 5 )]
 transform = Transform( -11.2319, 0, -0.0378961, 0, 12.0571, 0, 0.0368525, 0, -11.55, 19.9904, 2.80727, -9.46697 )
@@ -144,7 +173,19 @@ transform = Transform( -11.2319, 0, -0.0378961, 0, 12.0571, 0, 0.0368525, 0, -11
 transform = Transform( 12.328, 0, 0, 0, 9.79967, 0, 0, 0, 7.41882, 20.7878, -0.458646, -20.343 )
 
 [node name="televisionModern" parent="." instance=ExtResource( 7 )]
-transform = Transform( 7.27922, 0, 0, 0, 7.27922, 0, 0, 0, 2.62313, 19.6616, 3.29129, -30.9234 )
+transform = Transform( 7.27922, 0, 0, 0, 7.27922, 0, 0, 0, 2.62313, 19.9752, 3.2086, -30.9234 )
 
 [node name="rugRound" parent="." instance=ExtResource( 8 )]
 transform = Transform( -12.4851, -4.08961, -12.6193, -0.354441, 0.935845, -0.079365, 12.1343, 3.48193, -13.1336, 18, 0.0545325, -0.955109 )
+
+[node name="Cake" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.898, 1.71656, 0.287895 )
+
+[node name="kitchenStove" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1.58959, 0, 0, 0, 1.6991, 0, 0, 0, 2.08314, -36.0051, 7.65127, -9.6488 )
+
+[node name="låda" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.0167368, 0, -0.99986, 0, 1, 0, 0.99986, 0, 0.0167368, -34.561, 2.4912, 3.56524 )
+script = ExtResource( 11 )
+[connection signal="input_event" from="gun A" to="dog" method="_on_gun_A_input_event"]
+[connection signal="body_entered" from="Cake" to="dog" method="_on_Cake_body_entered"]

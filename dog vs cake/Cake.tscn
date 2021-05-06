@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="Skin" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+emission_enabled = true
+emission = Color( 0.976471, 0.54902, 0.54902, 1 )
+emission_energy = 4.32757
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CylinderShape" id=2]
+
+[sub_resource type="Animation" id=5]
+resource_name = "cake_animation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("cakeMesh:material/0:emission_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.62, 8.65 ]
+}
+
+[node name="Cake" type="Area"]
+
+[node name="cakeMesh" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = SubResource( 1 )
+skin = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "cake_animation"
+anims/cake_animation = SubResource( 5 )

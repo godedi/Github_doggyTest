@@ -91,6 +91,7 @@ extents = Vector3( 0.221515, 0.20567, 0.219431 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.25, 0.5 )
 
 [node name="kitchenStoveClone" type="MeshInstance" parent="."]
+transform = Transform( 7.51608, 0, 0, 0, 6.43742, 0, 0, 0, 6.69619, -1.54235, -0.931668, 1.39839 )
 mesh = SubResource( 1 )
 material/0 = null
 material/1 = null
@@ -104,5 +105,5 @@ material/0 = null
 material/1 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212233, 0.227213, -0.247339 )
+transform = Transform( 6.65908, 0, 0, 0, 6.74156, 0, 0, 0, 7.0606, 0.212233, 0.227213, -0.247339 )
 shape = SubResource( 3 )

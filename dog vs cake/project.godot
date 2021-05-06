@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="dog vs cake"
-run/main_scene="res://Level.tscn"
+run/main_scene="res://menu.tscn"
 config/icon="res://icon.png"
 
 [input]
