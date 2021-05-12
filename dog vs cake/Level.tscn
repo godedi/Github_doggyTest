@@ -161,7 +161,7 @@ transform = Transform( 0.387015, -0.459645, -0.799341, -0.586241, -0.791785, 0.1
 light_color = Color( 0.886275, 0.811765, 0.658824, 1 )
 
 [node name="dog" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.95015, 1.83868, 6.80245 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9194, 0.683986, 6.46387 )
 
 [node name="gun A" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6713, 3.90185, -19.8956 )
@@ -176,10 +176,10 @@ transform = Transform( 12.328, 0, 0, 0, 9.79967, 0, 0, 0, 7.41882, 20.7878, -0.4
 transform = Transform( 7.27922, 0, 0, 0, 7.27922, 0, 0, 0, 2.62313, 19.9752, 3.2086, -30.9234 )
 
 [node name="rugRound" parent="." instance=ExtResource( 8 )]
-transform = Transform( -12.4851, -4.08961, -12.6193, -0.354441, 0.935845, -0.079365, 12.1343, 3.48193, -13.1336, 18, 0.0545325, -0.955109 )
+transform = Transform( -12.4851, -4.08961, -12.6193, -0.354441, 0.935845, -0.079365, 12.1343, 3.48193, -13.1336, 18, 18.4632, -0.955109 )
 
 [node name="Cake" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.898, 1.71656, 0.287895 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.8184, 9.20344, -4.18681 )
 
 [node name="kitchenStove" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1.58959, 0, 0, 0, 1.6991, 0, 0, 0, 2.08314, -36.0051, 7.65127, -9.6488 )

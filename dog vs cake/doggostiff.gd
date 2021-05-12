@@ -42,15 +42,16 @@ func _process(delta):
 		weapon_to_drop = null
 		
 		#koden som gör att du greppar saker
-	if Input.is_action_just_pressed("grab"):
-		if weapon_to_spawn != null:
-			if hand.get_child(0) != null:
-				get_parent().add_child(weapon_to_drop)
-				weapon_to_drop.global_transform = hand.global_transform
-				weapon_to_drop.dropped = true
-			reach.get_collider().queue_free()
-			hand.add_child(weapon_to_spawn)
-			weapon_to_spawn.rotation = hand.rotation
+#	if Input.is_action_just_pressed("grab"):
+#		if weapon_to_spawn != null:
+#			if hand.get_child(0) != null:
+#				get_parent().add_child(weapon_to_drop)
+#				weapon_to_drop.global_transform = hand.global_translation
+#				weapon_to_drop.dropped = true
+#			reach.get_collider().queue_free()
+#			hand.add_child(weapon_to_spawn)
+#			weapon_to_spawn.rotation = hand.rotation
+		
 			
 			
 			
