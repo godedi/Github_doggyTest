@@ -8,6 +8,7 @@
 albedo_color = Color( 0.968627, 1, 0.0470588, 1 )
 
 [node name="låda" type="RigidBody"]
+gravity_scale = 6.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1.99935, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )

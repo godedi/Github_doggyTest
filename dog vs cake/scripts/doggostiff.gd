@@ -82,7 +82,7 @@ func _physics_process(delta):
 	move_and_slide(velocity + Vector3.UP * vertical_velocity, Vector3.UP,false,4,0.785398,false)
 	
 	#Gör att hundens "Mesh" roterar. Så att den tittar åt det håll man går. 
-	$doggo.rotation.y = lerp_angle($doggo.rotation.y, atan2(-direction.x, -direction.z), delta * angular_acceleration) 
+	$doggo.rotation.y = lerp_angle($doggo.rotation.y, atan2(-direction.z, direction.x), delta * angular_acceleration) 
 	
 	#Gör så att hunden kan hoppa upp på en rigidbody
 	for index in get_slide_count():
