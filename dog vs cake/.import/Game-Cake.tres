@@ -12,60 +12,60 @@ params_cull_mode = 2
 albedo_color = Color( 0.641088, 0.332181, 0.906332, 1 )
 roughness = 0.529412
 
-[sub_resource type="SpatialMaterial" id=11]
+[sub_resource type="SpatialMaterial" id=3]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.906332, 0.827211, 0.723612, 1 )
 
-[sub_resource type="SpatialMaterial" id=12]
+[sub_resource type="SpatialMaterial" id=4]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.704833, 0.0498401, 0.0849447, 1 )
 roughness = 0.509804
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=5]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.31778, 0.906332, 0.417003, 1 )
 roughness = 0.647059
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=6]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.411645, 0.659267, 0.906332, 1 )
 roughness = 0.619608
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=7]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.110702, 0.906332, 0.771636, 1 )
 roughness = 0.352941
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=8]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 1, 0.861693, 0, 1 )
 roughness = 0.501961
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=9]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 1, 0.595851, 0, 1 )
 roughness = 0.501961
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=10]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.259833, 0.110702, 0.0498401, 1 )
 roughness = 0.6
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=11]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.131804, 0.0498401, 0, 1 )
 roughness = 0.529412
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="SpatialMaterial" id=12]
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 albedo_color = Color( 0.906332, 0.906332, 0.906332, 1 )
@@ -104,7 +104,7 @@ surfaces/2 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 144,
-"material": SubResource( 3 ),
+"material": SubResource( 5 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 96
@@ -116,7 +116,7 @@ surfaces/3 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 144,
-"material": SubResource( 4 ),
+"material": SubResource( 6 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 96
@@ -128,7 +128,7 @@ surfaces/4 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 144,
-"material": SubResource( 5 ),
+"material": SubResource( 7 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 96
@@ -140,7 +140,7 @@ surfaces/5 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 144,
-"material": SubResource( 6 ),
+"material": SubResource( 8 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 96
@@ -152,7 +152,7 @@ surfaces/6 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 144,
-"material": SubResource( 7 ),
+"material": SubResource( 9 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 96
@@ -164,7 +164,7 @@ surfaces/7 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 2544,
-"material": SubResource( 8 ),
+"material": SubResource( 10 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 1696
@@ -176,7 +176,7 @@ surfaces/8 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 5184,
-"material": SubResource( 9 ),
+"material": SubResource( 11 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 3456
@@ -188,7 +188,7 @@ surfaces/9 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 3456,
-"material": SubResource( 10 ),
+"material": SubResource( 12 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 772
@@ -200,7 +200,7 @@ surfaces/10 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 8280,
-"material": SubResource( 11 ),
+"material": SubResource( 3 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 5646
@@ -212,7 +212,7 @@ surfaces/11 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 1536,
-"material": SubResource( 12 ),
+"material": SubResource( 4 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 272
