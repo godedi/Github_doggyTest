@@ -42,15 +42,16 @@ surfaces/1 = {
 }
 
 [sub_resource type="BoxShape" id=4]
-extents = Vector3( 0.255538, 0.193814, 0.217299 )
+extents = Vector3( 0.74564, 0.56359, 0.652174 )
 
 [node name="Trashcannolid" type="StaticBody"]
 
 [node name="Trashcan" type="MeshInstance" parent="."]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 2.17562, 0, 0, 0, 1.10071, 0, 0.42468, -0.0140786 )
+transform = Transform( 1, 0, 0, 0, 2.17562, 0, 0, 0, 1.10071, 0, 1.266, -0.0140786 )
 shape = SubResource( 4 )

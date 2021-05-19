@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://möbler/GLTF format/wood.material" type="Material" id=1]
 
@@ -17,15 +17,17 @@ surfaces/0 = {
 "vertex_count": 168
 }
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="SpatialMaterial" id=2]
+
+[sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.33354, 0.132065, 0.203867 )
 
 [node name="tableCoffee" type="StaticBody"]
 
 [node name="tableCoffeeClone" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
-material/0 = null
+material/0 = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112901, 0.084396, -0.0843504 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )

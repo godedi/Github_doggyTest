@@ -5,14 +5,14 @@
 [ext_resource path="res://sounds/dog-bark.ogg" type="AudioStream" id=3]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.728382, 0.58504, 1 )
+extents = Vector3( 0.281148, 0.21381, 0.22573 )
 
 [node name="dog" type="KinematicBody"]
 transform = Transform( -0.0463739, 0, 0.998925, 0, 1, 0, -0.998925, 0, -0.0463739, 0, 0, 0 )
 script = ExtResource( 1 )
 
 [node name="doggo" type="MeshInstance" parent="."]
-transform = Transform( -0.0125865, 0, 6.99999, 0, 7, 0, -6.99999, 0, -0.0125865, -0.0685069, 0.259353, -0.232513 )
+transform = Transform( -0.0017981, 0, 0.999997, 0, 1, 0, -0.999997, 0, -0.0017981, 0.0125309, 0.00694212, 0.0111331 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
@@ -23,23 +23,15 @@ material/5 = null
 material/6 = null
 material/7 = null
 
-[node name="reach" type="RayCast" parent="doggo"]
-transform = Transform( -0.0230735, -0.244231, 0.96944, 0.999543, -0.0245992, 0.0175926, 0.0195509, 0.969403, 0.244687, -1.32246, 1.25183, -1.09422 )
-enabled = true
-cast_to = Vector3( 0, -1, -5 )
-
-[node name="hand" type="Spatial" parent="doggo"]
-transform = Transform( 0.0505701, 0.883218, -0.466228, -0.719038, -0.291787, -0.63075, -0.693129, 0.367133, 0.620311, -1.3006, 2.15517, -1.01045 )
-
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.17897, 0, 0.995987, 0, 2, 0, -1.99198, 0, 0.0894851, -0.0174703, 1.3581, -0.285638 )
-shape = SubResource( 1 )
-
 [node name="head" type="Spatial" parent="."]
-transform = Transform( 1, 0, -1.49012e-08, 0, 0.968326, 0.249687, 0, -0.249687, 0.968326, 0.616352, 6.29132, 5.78002 )
+transform = Transform( 1, -7.45058e-09, -1.49012e-08, 0, 0.968326, 0.249687, -1.49012e-08, -0.249687, 0.968325, 0.837335, 0.380809, 1.01989 )
 
 [node name="Camera" type="Camera" parent="head"]
-transform = Transform( 0.999987, 0.00120831, -0.00493307, -0.000749576, 0.995763, 0.0919553, 0.00502328, -0.0919504, 0.995751, -1.33536, 1.41108, 5.70453 )
+transform = Transform( 0.999987, 0.00120831, -0.00493304, -0.000749576, 0.995763, 0.0919556, 0.00502328, -0.0919504, 0.995751, -0.921631, 1.08783, 1.71308 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.403513, 0, -0.0276911, 0, 0.933875, 0, -0.0276912, 0, 0.998713, 0, 0.2133, 0 )
+shape = SubResource( 1 )

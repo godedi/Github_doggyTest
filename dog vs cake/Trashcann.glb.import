@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Trashcannolid.glb-0cb0225743ef0932e22073f5705b8007.scn"
+path="res://.import/Trashcann.glb-a0d6e258bf24e3daed3599e71dea0798.scn"
 
 [deps]
 
-source_file="res://Trashcannolid.glb"
-dest_files=[ "res://.import/Trashcannolid.glb-0cb0225743ef0932e22073f5705b8007.scn" ]
+source_file="res://Trashcann.glb"
+dest_files=[ "res://.import/Trashcann.glb-a0d6e258bf24e3daed3599e71dea0798.scn" ]
 
 [params]
 
@@ -16,7 +16,6 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
-nodes/use_legacy_names=false
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true

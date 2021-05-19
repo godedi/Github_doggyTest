@@ -56,5 +56,4 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="pressed" from="button-title-play" to="button-title-play" method="_on_buttontitleplay_pressed"]

@@ -1,170 +1,144 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://doggostiff.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cake.tscn" type="PackedScene" id=3]
 [ext_resource path="res://möbler/GLTF format/wood.material" type="Material" id=4]
-[ext_resource path="res://furniture/sofa.tscn" type="PackedScene" id=5]
-[ext_resource path="res://furniture/tableCoffee.tscn" type="PackedScene" id=6]
-[ext_resource path="res://furniture/televisionModern.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Living_room_floor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Kitchen_floor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://wall_livingroom.tscn" type="PackedScene" id=7]
 [ext_resource path="res://furniture/rugRound.tscn" type="PackedScene" id=8]
 [ext_resource path="res://furniture/kitchenStove.tscn" type="PackedScene" id=9]
 [ext_resource path="res://obejects att greppa/låda.tscn" type="PackedScene" id=10]
 [ext_resource path="res://obejects att greppa/låda.gd" type="Script" id=11]
-[ext_resource path="res://63.material" type="Material" id=12]
-[ext_resource path="res://balloon.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Trashcan.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Trashcan-lid.tscn" type="PackedScene" id=13]
+[ext_resource path="res://furniture/sofa.tscn" type="PackedScene" id=14]
+[ext_resource path="res://furniture/televisionModern.tscn" type="PackedScene" id=15]
+[ext_resource path="res://furniture/tableCoffee.tscn" type="PackedScene" id=16]
+[ext_resource path="res://balloons.tscn" type="PackedScene" id=17]
 
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 15, 1, 15 )
-
-[sub_resource type="CubeMesh" id=2]
-material = ExtResource( 12 )
-size = Vector3( 30, 2, 30 )
-
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.647059, 0.439216, 0.0352941, 1 )
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 2.78439, 8.50867, 2.74812 )
 
-[sub_resource type="CubeMesh" id=5]
+[sub_resource type="CubeMesh" id=3]
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.180392, 0.054902, 0.0784314, 1 )
 
 [node name="Level" type="Spatial"]
 
-[node name="KitchenFloor" type="StaticBody" parent="."]
-transform = Transform( 2.90637, 0, 0, 0, 0.950877, 0, 0, 0, 2.28785, 0, -1, 0 )
+[node name="livingRoomFloor" parent="." instance=ExtResource( 5 )]
 
-[node name="CollisionShape" type="CollisionShape" parent="KitchenFloor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32474, 0, -0.964581 )
-shape = SubResource( 1 )
+[node name="KitchenFloor" parent="." instance=ExtResource( 6 )]
 
-[node name="MeshInstance" type="MeshInstance" parent="KitchenFloor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34059, -0.320074, -1.06837 )
-mesh = SubResource( 2 )
-material/0 = null
-
-[node name="walls" type="StaticBody" parent="."]
-transform = Transform( 2.90633, 0.00162238, 0.00932933, -0.0136998, 0.00723718, 1.53822, 0.00469215, -0.949934, 0.0859372, -0.424652, 9.99395, -35.9886 )
-
-[node name="CollisionShape" type="CollisionShape" parent="walls"]
-transform = Transform( 1, -4.65661e-10, 6.40284e-10, 0, 1, 0, 6.98492e-10, 0, 1, -1.32474, 3.8147e-06, -0.96458 )
-shape = SubResource( 1 )
-
-[node name="MeshInstance" type="MeshInstance" parent="walls"]
-transform = Transform( 1, 5.82077e-11, 2.76486e-10, -4.65661e-10, 1, 0, -6.33008e-10, -4.65661e-10, 1, -1.39926, -0.32008, -1.06388 )
-mesh = SubResource( 2 )
-material/0 = null
+[node name="walls" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.956163, 0.000533752, 0.00306929, -0.00288934, -0.0511265, 0.35847, 0.00059667, -0.104705, 0.000520226, 0.503696, 5.64384, -9.3935 )
 
 [node name="CSGCombiner" type="CSGCombiner" parent="."]
 use_collision = true
 
 [node name="walls" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.0734, 15.2822, -4.50667 )
-width = 0.002
-height = 31.9309
-depth = 61.9308
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5759, 4.83137, -0.750257 )
+width = 0.139676
+height = 10.4682
+depth = 17.1696
 material = ExtResource( 4 )
 
 [node name="wall2" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.3311, 15.493, -4.04461 )
-width = 0.002
+transform = Transform( 1.86023, 0, 0, 0, 0.237973, 0, 0, 0, 0.277683, -13.6476, 3.81258, -0.393141 )
+width = 0.0925859
 height = 31.9309
 depth = 61.9308
 material = ExtResource( 4 )
 
 [node name="middleWall" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.440912, 15.0033, -12.6058 )
-width = 1.03955
-height = 31.831
-depth = 43.5877
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0911567, 4.4007, -2.2539 )
+width = 0.208823
+height = 8.82516
+depth = 14.3472
 material = ExtResource( 4 )
 
 [node name="middleWall2" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.308829, 2.77162, 20.3562 )
-width = 1.03955
-height = 6.41227
-depth = 22.3904
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0497642, 0.901626, 6.418 )
+width = 0.321103
+height = 1.87822
+depth = 3.09393
 material = ExtResource( 4 )
 
 [node name="window" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.188147, 12.2208, -28.1353 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0154238, 4.14087, -7.38251 )
 operation = 2
-width = 4.80525
-height = 5.38883
-depth = 6.04907
+width = 1.9507
+height = 1.53204
+depth = 1.33073
 
 [node name="window2" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1, 0, 0, 0, 0.999955, 0.00952935, 0, -0.00952935, 0.999955, -47.3705, 14.802, -7.69085 )
+transform = Transform( 1, 0, 0, 0, 0.177776, 0.00169417, 0, -0.00245226, 0.257326, -13.7476, 4.70279, -4.69206 )
 operation = 2
 width = 1.27285
 height = 13.5096
 depth = 14.4308
 
 [node name="caketable" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3839, 5.14884, -31.1365 )
-width = 26.8509
-height = 9.13848
-depth = 9.42377
-material = SubResource( 3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.98303, 1.09472, -8.08735 )
+width = 13.312
+height = 2.05364
+depth = 2.16483
+material = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.387015, -0.459645, -0.799341, -0.586241, -0.791785, 0.171462, -0.711717, 0.402248, -0.575895, -48.9528, 16.8762, -8.50974 )
 light_color = Color( 0.886275, 0.811765, 0.658824, 1 )
 
 [node name="dog" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4876, 9.0871, 20.5865 )
-
-[node name="gun A" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7966, 5.2771, -21.4978 )
-
-[node name="gun A2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5901, 12.4285, -23.2878 )
-
-[node name="loungeDesignSofa" parent="." instance=ExtResource( 5 )]
-transform = Transform( -11.2319, 0, -0.0378961, 0, 12.0571, 0, 0.0368525, 0, -11.55, 29.798, 2.80727, -9.46697 )
-
-[node name="tableCoffee" parent="." instance=ExtResource( 6 )]
-transform = Transform( 12.328, 0, 0, 0, 9.79967, 0, 0, 0, 7.41882, 33.5941, -0.458646, -20.343 )
-
-[node name="televisionModern" parent="." instance=ExtResource( 7 )]
-transform = Transform( 7.27922, 0, 0, 0, 7.27922, 0, 0, 0, 2.62313, 33.3286, 3.2086, -30.9234 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31566, 1.36399, 6.38238 )
 
 [node name="rugRound" parent="." instance=ExtResource( 8 )]
 transform = Transform( -12.4888, -4.07639, -12.6192, -0.183139, 0.991858, 0.0937522, 12.1343, 3.48193, -13.1336, 17.8962, -0.0480676, -0.939654 )
 
 [node name="Cake" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.46489, 10.278, -3.97551 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97092, 3.50274, 5.78859 )
 
 [node name="kitchenStove" parent="." instance=ExtResource( 9 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -32.8407, 4.04761, -30.2344 )
+transform = Transform( 0.647613, 0, 0, 0, 0.807384, 0, 0, 0, 0.847279, -8.67103, 0.741828, -7.80379 )
 
 [node name="låda" parent="." instance=ExtResource( 10 )]
-transform = Transform( 0.0167368, 0, -0.99986, 0, 1, 0, 0.99986, 0, 0.0167368, -42.6199, 4.47029, -19.7126 )
+transform = Transform( 0.0167368, 0, -0.99986, 0, 1, 0, 0.99986, 0, 0.0167368, 12.4366, 1.58824, 3.08285 )
 script = ExtResource( 11 )
 
-[node name="tvtable" type="CSGBox" parent="."]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.0281, 1.13997, -32.0557 )
-width = 4.21218
-height = 4.12515
-depth = 14.4308
-
 [node name="balloonTable" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85994, 0.694028, -28.2756 )
+transform = Transform( 0.33947, 0, 0, 0, 0.345242, 0, 0, 0, -0.410403, 1.00487, 0.904841, -8.10256 )
 
 [node name="CollisionShape" type="CollisionShape" parent="balloonTable"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="balloonTable"]
 transform = Transform( 2.61384, 0, 0, 0, 5.34418, 0, 0, 0, 2.6742, 0, 3.1655, 0.165937 )
-mesh = SubResource( 5 )
-material/0 = SubResource( 6 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
-[node name="balloon" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3114, 11.3858, -32.552 )
+[node name="present" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.15816, 0.93708, -0.946198 )
 
-[connection signal="input_event" from="gun A" to="dog" method="_on_gun_A_input_event"]
-[connection signal="input_event" from="gun A2" to="dog" method="_on_gun_A_input_event"]
+[node name="Trashcannolid" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1976, 0.13462, -4.27087 )
+
+[node name="Trashcan-lid" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4174, 2.85398, -4.51901 )
+
+[node name="loungeDesignSofa" parent="." instance=ExtResource( 14 )]
+transform = Transform( -0.0416258, 0, -4.99983, 0, 5, 0, 4.99983, 0, -0.0416258, 13.8907, 1.23995, -1.19577 )
+
+[node name="televisionModern" parent="." instance=ExtResource( 15 )]
+transform = Transform( 0.00853429, 0, 2.99999, 0, 3, 0, -2.99999, 0, 0.00853429, 0.564699, 0.773089, -0.292797 )
+
+[node name="tableCoffee" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1.37127, 0, 0, 0, 3, 0, 0, 0, 7.75954, 0.750399, 0, 0.520057 )
+
+[node name="balloons" parent="." instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8007, 6.80397, -6.74867 )
 [connection signal="body_entered" from="Cake" to="dog" method="_on_Cake_body_entered"]

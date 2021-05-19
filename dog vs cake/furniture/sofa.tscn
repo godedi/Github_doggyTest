@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://möbler/GLTF format/carpetBlue.material" type="Material" id=1]
 [ext_resource path="res://möbler/GLTF format/metal.material" type="Material" id=2]
@@ -30,7 +30,10 @@ surfaces/1 = {
 "vertex_count": 184
 }
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0509804, 0.203922, 0.0470588, 1 )
+
+[sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.600488, 0.192151, 0.194105 )
 
 [node name="loungeDesignSofa" type="StaticBody"]
@@ -38,9 +41,9 @@ extents = Vector3( 0.600488, 0.192151, 0.194105 )
 [node name="loungeDesignSofaClone" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.25, 0.5 )
 mesh = SubResource( 1 )
-material/0 = null
+material/0 = SubResource( 2 )
 material/1 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.956129, 0, 0, 0, 0.956129, 0, 0, 0, 0.97379, 0.0494784, -0.0796087, 0.284082 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
