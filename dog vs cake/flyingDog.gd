@@ -1,4 +1,5 @@
 extends KinematicBody
+
 # Vanliga variabler
 var direction = Vector3.FORWARD
 var velocity = Vector3.ZERO
@@ -40,7 +41,7 @@ func _physics_process(delta):
 	move_and_slide(velocity + Vector3.UP * vertical_velocity, Vector3.UP,false,4,0.785398,false)
 	
 	#Gör att hundens "Mesh" roterar. Så att den tittar åt det håll man går. 
-	$doggo.rotation.y = lerp_angle($doggo.rotation.y, atan2(-direction.z, direction.x), delta * angular_acceleration) 
+	$flyDoggo.rotation.y = lerp_angle($flyDoggo.rotation.y, atan2(-direction.x, -direction.z), delta * angular_acceleration) 
 	
 	#Gör så att hunden kan hoppa upp på en rigidbody
 	for index in get_slide_count():
@@ -48,25 +49,10 @@ func _physics_process(delta):
 		if collision.collider.is_in_group("bodies"):
 			collision.collider.apply_central_impulse(-collision.normal * push)
 	
-	#Fixar gravitation i spelet. 
-	if !is_on_floor():
-		vertical_velocity -= gravity * delta
-		
-		#Mekanismen för att hoppa.
-	if is_on_floor():
-		if Input.is_action_just_pressed("jump"):
-			vertical_velocity = jump_magnitude
-			
-	
-	if Input.is_action_just_pressed("skall"):
-		$AudioStreamPlayer.play()
-		
-		
-		
 	
 
 #Byter scen till the end när du nuddar tårtan
 func _on_Cake_body_entered(body):
-	if body.name == "dog":
+	if body.name == "FlyingDog":
 		get_tree().change_scene("res://TheEnd.tscn")
-	
+

@@ -35,7 +35,7 @@ surfaces/1 = {
 extents = Vector3( 0.617863, 0.439374, 0.0266334 )
 
 [node name="televisionModern" type="RigidBody"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.820476, 0 )
 script = ExtResource( 3 )
 
 [node name="televisionModernClone" type="MeshInstance" parent="."]
