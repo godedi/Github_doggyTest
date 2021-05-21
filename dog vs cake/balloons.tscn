@@ -107,7 +107,7 @@ height = 1.66841
 [node name="root" type="Spatial" parent="."]
 
 [node name="node_id12" type="Spatial" parent="root"]
-transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.902803, -0.196597, -2.83602 )
+transform = Transform( 0.00514588, 0, 0, 0, 0.0065601, 0, 0, 0, 0.00583235, -0.902803, 0.13267, -1.15853 )
 
 [node name="Mesh" type="MeshInstance" parent="root/node_id12"]
 transform = Transform( 292.301, 0, 0, 0, 292.301, 0, 0, 0, 292.301, 2.32347, -443.841, 268.95 )

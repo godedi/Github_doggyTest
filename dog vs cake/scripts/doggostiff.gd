@@ -14,7 +14,8 @@ var acceleration = 4
 var angular_acceleration = 7 
 var push = 2
 
-
+var flyingDog = false
+var dogGravity = true
 
 func _physics_process(delta):
 	
@@ -49,8 +50,9 @@ func _physics_process(delta):
 			collision.collider.apply_central_impulse(-collision.normal * push)
 	
 	#Fixar gravitation i spelet. 
-	if !is_on_floor():
-		vertical_velocity -= gravity * delta
+	if dogGravity == true:
+		if !is_on_floor():
+			vertical_velocity -= gravity * delta
 		
 		#Mekanismen för att hoppa.
 	if is_on_floor():
@@ -63,7 +65,11 @@ func _physics_process(delta):
 		
 		
 		
-	
+	if Input.is_action_just_pressed("grab"):
+		flyingDog = true
+		if flyingDog == true:
+			dogGravity = false
+			
 
 #Byter scen till the end när du nuddar tårtan
 func _on_Cake_body_entered(body):
