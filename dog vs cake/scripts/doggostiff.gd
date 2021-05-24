@@ -66,6 +66,9 @@ func _physics_process(delta):
 		
 		
 	if Input.is_action_just_pressed("grab"):
+		$doggo.visible = false
+		$doggo_flyger.visible = true
+		$CollisionShape_flying.disabled = false
 		flyingDog = true
 		if flyingDog == true:
 			dogGravity = false
@@ -76,3 +79,13 @@ func _on_Cake_body_entered(body):
 	if body.name == "dog":
 		get_tree().change_scene("res://TheEnd.tscn")
 	
+
+
+func _on_balloons_body_entered(body):
+	if body.name == "dog":
+		$doggo.visible = false
+		$doggo_flyger.visible = true
+		$CollisionShape_flying.disabled = false
+		flyingDog = true
+		if flyingDog == true:
+			dogGravity = false

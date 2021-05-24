@@ -104,7 +104,7 @@ light_color = Color( 0.886275, 0.811765, 0.658824, 1 )
 transform = Transform( -5.67908, -1.85367, -5.73837, -0.00637425, 0.0345221, 0.0032631, 4.5432, 1.30367, -4.91735, 6.38397, 0.0619216, -4.33923 )
 
 [node name="Cake" parent="." instance=ExtResource( 3 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -10.547, 2.87246, 2.08941 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -10.547, 5.14826, 2.08941 )
 
 [node name="kitchenStove" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.647613, 0, 0, 0, 0.807384, 0, 0, 0, 0.847279, -8.67103, 0.741828, -7.80379 )
@@ -147,13 +147,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6637, 4.31263, -6.899 )
 transform = Transform( -6.51683e-07, 0, 4, 0, 4, 0, -4, 0, -6.51683e-07, 13.6747, 0, 6.51209 )
 
 [node name="bookcaseClosed" parent="." instance=ExtResource( 20 )]
-transform = Transform( 1.38309, 0, 0, 0, 1.08065, 0, 0, 0, 1, 1.08149, 0, -8.01398 )
+transform = Transform( 1.38309, 0, 0, 0, 1.08065, 0, 0, 0, 1, 9.76828, 0, -6.32309 )
 
 [node name="doorway2" parent="." instance=ExtResource( 19 )]
 transform = Transform( -4.88762e-07, 3, -4.88762e-07, 0, -4.88762e-07, -3, -3, -4.88762e-07, 7.96295e-14, 4.12322, 3.84066, -7.79657 )
 
 [node name="dog" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.99717, 0, -0.075188, 0, 1, 0, 0.075188, 0, 0.99717, 5.98182, 0, 4.26705 )
+transform = Transform( 0.99717, 0, -0.075188, 0, 1, 0, 0.075188, 0, 0.99717, 9.43307, 3.71601, -6.73206 )
 
 [node name="Spatial" type="StaticBody" parent="."]
 transform = Transform( 1.02128, 0, 0, 0, 1.02128, 0, 0, 0, 1, 0, 9.38894, 0 )
@@ -176,3 +176,5 @@ transform = Transform( 3.26102, 0, 0, 0, 8.34355, 0, 0, 0, 7.10657, -11.8924, 0,
 
 [node name="chair" parent="." instance=ExtResource( 23 )]
 transform = Transform( 7.9767, 0, 0, 0, 7.09102, 0, 0, 0, 7.5025, -11.6534, 0.0179048, 1.02201 )
+[connection signal="body_entered" from="Cake" to="dog" method="_on_Cake_body_entered"]
+[connection signal="body_entered" from="balloons" to="dog" method="_on_balloons_body_entered"]

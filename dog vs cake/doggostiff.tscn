@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/doggostiff.gd" type="Script" id=1]
 [ext_resource path="res://.import/Official-gamedoggy.tres" type="ArrayMesh" id=2]
 [ext_resource path="res://sounds/dog-bark.ogg" type="AudioStream" id=3]
+[ext_resource path="res://.import/blue.tres" type="ArrayMesh" id=4]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.451842, 0.341926, 0.339606 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.230522, 2.1586, 0.386988 )
 
 [node name="dog" type="KinematicBody"]
 transform = Transform( -0.0463739, 0, 0.998925, 0, 1, 0, -0.998925, 0, -0.0463739, 0, 0, 0 )
@@ -23,15 +27,38 @@ material/5 = null
 material/6 = null
 material/7 = null
 
-[node name="head" type="Spatial" parent="."]
-transform = Transform( 1, -7.45058e-09, -1.49012e-08, 0, 0.968326, 0.249687, -1.49012e-08, -0.249687, 0.968325, 0.837335, 0.380809, 1.01989 )
+[node name="doggo_flyger" type="MeshInstance" parent="."]
+transform = Transform( -0.0365226, -0.0709092, 1.99841, 1.52731, 1.28915, 0.0736558, -1.29074, 1.52743, 0.0306084, 0.0125309, 0.00694212, 0.0111331 )
+visible = false
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
 
-[node name="Camera" type="Camera" parent="head"]
-transform = Transform( 0.999987, 0.00120831, -0.00493304, -0.000749576, 0.995763, 0.0919556, 0.00502328, -0.0919504, 0.995751, -0.921631, 1.08783, 1.71308 )
+[node name="MeshInstance" type="MeshInstance" parent="doggo_flyger"]
+transform = Transform( 0.674724, 0.737902, -0.0156867, -0.737906, 0.673967, -0.0355862, -0.0156868, 0.035586, 0.999244, -0.222515, -0.200673, -0.148423 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="CollisionShape_doggo" type="CollisionShape" parent="."]
+transform = Transform( 0.403513, 0, -0.0276911, 0, 0.933875, 0, -0.0276912, 0, 0.998712, 0.00843973, 0.3292, -0.0538173 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape_flying" type="CollisionShape" parent="."]
+transform = Transform( 0.999999, 0, 3.35276e-08, 0, 1, 0, -3.35276e-08, 0, 0.999999, 0, 2.19754, 0 )
+shape = SubResource( 2 )
+disabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.403513, 0, -0.0276911, 0, 0.933875, 0, -0.0276912, 0, 0.998712, 0.00843973, 0.3292, -0.0538173 )
-shape = SubResource( 1 )
+[node name="CameraZone" type="Spatial" parent="."]
+transform = Transform( 1, -8.3819e-09, -1.49012e-08, 0, 0.968326, 0.249687, -1.49012e-08, -0.249687, 0.968325, 0.837335, 0.380809, 1.01989 )
+
+[node name="Camera" type="Camera" parent="CameraZone"]
+transform = Transform( 0.999987, 0.00120831, -0.00493304, -0.000749576, 0.995763, 0.0919556, 0.00502328, -0.0919504, 0.995751, -0.921631, 1.08783, 1.71308 )
