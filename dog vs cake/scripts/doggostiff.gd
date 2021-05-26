@@ -93,3 +93,8 @@ func _on_balloons_body_entered(body):
 		flyingDog = true
 		if flyingDog == true:
 			dogGravity = false
+
+
+func _on_cookie_body_entered(body):
+	if body.name == "dog":
+		print("mums")
