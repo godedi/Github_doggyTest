@@ -42,6 +42,8 @@ func _physics_process(delta):
 	
 	#Gör att hundens "Mesh" roterar. Så att den tittar åt det håll man går. 
 	$doggo.rotation.y = lerp_angle($doggo.rotation.y, atan2(-direction.z, direction.x), delta * angular_acceleration) 
+	$doggo_flyger.rotation.y = lerp_angle($doggo_flyger.rotation.y, atan2(-direction.z, direction.x), delta * angular_acceleration)
+	
 	
 	#Gör så att hunden kan hoppa upp på en rigidbody
 	for index in get_slide_count():
@@ -53,6 +55,8 @@ func _physics_process(delta):
 	if dogGravity == true:
 		if !is_on_floor():
 			vertical_velocity -= gravity * delta
+	else: vertical_velocity += gravity * delta
+		
 		
 		#Mekanismen för att hoppa.
 	if is_on_floor():

@@ -27,18 +27,18 @@
 [ext_resource path="res://skies/the_sky_is_on_fire_1k.hdr" type="Texture" id=26]
 [ext_resource path="res://furniture/Grind.tscn" type="PackedScene" id=27]
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 12.0718, 1, 8.66988 )
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.647059, 0.439216, 0.0352941, 1 )
 
-[sub_resource type="PanoramaSky" id=4]
+[sub_resource type="PanoramaSky" id=3]
 panorama = ExtResource( 26 )
 
-[sub_resource type="Environment" id=5]
+[sub_resource type="Environment" id=4]
 background_mode = 2
-background_sky = SubResource( 4 )
+background_sky = SubResource( 3 )
 
 [node name="Level" type="Spatial"]
 
@@ -54,11 +54,11 @@ transform = Transform( 1.02128, 0, 0, 0, 1.02128, 0, 0, 0, 1, 0, 9.38894, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Spatial"]
 transform = Transform( 1.53024, 0, 0, 0, 0.128881, 0, 0, 0, 1.296, 0, -1.52055, 0 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Spatial"]
 transform = Transform( 1.53024, 0, 0, 0, -5.63357e-09, -1.269, 0, 0.131624, -5.665e-08, 4.05727, -2.3647, 7.43013 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="CSGCombiner" type="CSGCombiner" parent="."]
 use_collision = true
@@ -169,6 +169,9 @@ transform = Transform( -4.88762e-07, 3, -4.88762e-07, 0, -4.88762e-07, -3, -3, -
 [node name="dog" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.99717, 0, -0.075188, 0, 1, 0, 0.075188, 0, 0.99717, 8.43307, 0.71601, 3.92722 )
 
+[node name="CameraTarget" type="Spatial" parent="dog"]
+transform = Transform( 0.991762, -0.0537381, 0.116268, 0, 0.907734, 0.419547, -0.128086, -0.416091, 0.900256, 0.0549707, 1.88378, 2.93234 )
+
 [node name="kitchenMicrowave" parent="." instance=ExtResource( 25 )]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -1.43864, 2.15265, -8.30132 )
 
@@ -182,6 +185,12 @@ transform = Transform( 3.26102, 0, 0, 0, 8.34355, 0, 0, 0, 7.10657, -11.8924, 0,
 transform = Transform( 7.9767, 0, 0, 0, 7.09102, 0, 0, 0, 7.5025, -11.6534, 0.0179048, 1.02201 )
 
 [node name="ljussättning" type="WorldEnvironment" parent="."]
-environment = SubResource( 5 )
+environment = SubResource( 4 )
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5297, 1.8117, 9.18176 )
+target = NodePath("../dog/CameraTarget")
+speed = 5.0
+enabled = true
 [connection signal="body_entered" from="Cake" to="dog" method="_on_Cake_body_entered"]
 [connection signal="body_entered" from="balloons" to="dog" method="_on_balloons_body_entered"]

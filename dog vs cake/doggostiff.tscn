@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/doggostiff.gd" type="Script" id=1]
 [ext_resource path="res://.import/Official-gamedoggy.tres" type="ArrayMesh" id=2]
 [ext_resource path="res://sounds/dog-bark.ogg" type="AudioStream" id=3]
 [ext_resource path="res://.import/blue.tres" type="ArrayMesh" id=4]
+[ext_resource path="res://.import/redballon.tres" type="ArrayMesh" id=5]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.451842, 0.341926, 0.339606 )
@@ -45,6 +46,11 @@ transform = Transform( 0.674724, 0.737902, -0.0156867, -0.737906, 0.673967, -0.0
 mesh = ExtResource( 4 )
 material/0 = null
 
+[node name="MeshInstance2" type="MeshInstance" parent="doggo_flyger"]
+transform = Transform( 1, 3.19427e-08, 1.49012e-08, -3.25837e-08, 1, -7.51764e-09, 0, 3.21005e-10, 1, 0.446384, 0.376782, 0.0215273 )
+mesh = ExtResource( 5 )
+material/0 = null
+
 [node name="CollisionShape_doggo" type="CollisionShape" parent="."]
 transform = Transform( 0.403513, 0, -0.0276911, 0, 0.933875, 0, -0.0276912, 0, 0.998712, 0.00843973, 0.3292, -0.0538173 )
 shape = SubResource( 1 )
@@ -56,9 +62,3 @@ disabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-
-[node name="CameraZone" type="Spatial" parent="."]
-transform = Transform( 1, -8.3819e-09, -1.49012e-08, 0, 0.968326, 0.249687, -1.49012e-08, -0.249687, 0.968325, 0.837335, 0.380809, 1.01989 )
-
-[node name="Camera" type="Camera" parent="CameraZone"]
-transform = Transform( 0.999987, 0.00120831, -0.00493304, -0.000749576, 0.995763, 0.0919556, 0.00502328, -0.0919504, 0.995751, -0.921631, 1.08783, 1.71308 )
