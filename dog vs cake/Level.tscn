@@ -190,7 +190,7 @@ environment = SubResource( 4 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.19419, 1.8117, 9.18176 )
-target = NodePath("../doggyrigg/CameraTarget2")
+target = NodePath("../doggo/CameraTarget2")
 speed = 5.0
 enabled = true
 
@@ -198,7 +198,7 @@ enabled = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25949, 1.12591, 5.22608 )
 
 [node name="CameraTarget2" type="Spatial" parent="doggo"]
-transform = Transform( 0.998586, -0.022301, 0.0482505, 0, 0.907734, 0.419547, -0.0531549, -0.418954, 0.90645, 2.09934, 0.638509, -0.620863 )
+transform = Transform( 0.998586, -0.022301, 0.0482505, 0, 0.907734, 0.419547, -0.0531549, -0.418954, 0.90645, 0.0377779, 0.638509, 1.90791 )
 
 [node name="vittPaket" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9166, 1.32824, 0 )
