@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://animation/doggyrigg.tscn" type="PackedScene" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://furniture/Grind.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Rich Eatin'.otf" type="DynamicFontData" id=28]
 [ext_resource path="res://kaka.png" type="Texture" id=29]
+[ext_resource path="res://musik/Peekaboo_Full_Track.ogg" type="AudioStream" id=30]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 12.0718, 1, 8.66988 )
@@ -137,7 +138,7 @@ transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 10.3711, 0.521941, -6
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 9.69361, 0.30303, -6.971 )
 
 [node name="present3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.0356473, 1.59476e-05, -0.0350609, -1.57428e-05, 0.05, 6.73653e-06, 0.0350609, 6.23636e-06, 0.0356473, 10.5059, 0.30303, -5.59447 )
+transform = Transform( 0.0356473, 1.59476e-05, -0.0350609, -1.57428e-05, 0.05, 6.73653e-06, 0.0350609, 6.23636e-06, 0.0356473, 3.26203, 0.30303, 2.41243 )
 
 [node name="present4" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -9.27724, 0.30303, -3.62012 )
@@ -168,7 +169,7 @@ transform = Transform( -6.51683e-07, 0, 4, 0, 4, 0, -4, 0, -6.51683e-07, 13.6747
 transform = Transform( 1.38309, 0, 0, 0, 1.08065, 0, 0, 0, 1, 9.76828, 0, -6.32309 )
 
 [node name="Grind" parent="." instance=ExtResource( 27 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.0789502, -0.0157419, 6.50943 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 0.86569, 0, -1, 0, -1.62921e-07, -0.0789502, -0.0157419, 6.50943 )
 
 [node name="doorway2" parent="." instance=ExtResource( 19 )]
 transform = Transform( -4.88762e-07, 3, -4.88762e-07, 0, -4.88762e-07, -3, -3, -4.88762e-07, 7.96295e-14, 4.12322, 3.84066, -7.79657 )
@@ -188,17 +189,8 @@ transform = Transform( 7.9767, 0, 0, 0, 7.09102, 0, 0, 0, 7.5025, -11.6534, 0.01
 [node name="ljussättning" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
 
-[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.19419, 1.8117, 9.18176 )
-target = NodePath("../doggo/CameraTarget2")
-speed = 5.0
-enabled = true
-
 [node name="doggo" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25949, 1.12591, 5.22608 )
-
-[node name="CameraTarget2" type="Spatial" parent="doggo"]
-transform = Transform( 0.998586, -0.022301, 0.0482505, 0, 0.907734, 0.419547, -0.0531549, -0.418954, 0.90645, 0.0377779, 0.638509, 1.90791 )
 
 [node name="vittPaket" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9166, 1.32824, 0 )
@@ -242,3 +234,8 @@ text = "Q"
 
 [node name="cookie" parent="." instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.96777, 1.08344, 0 )
+
+[node name="MusicLevel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 30 )
+volume_db = -10.097
+autoplay = true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pomerainian_barking.ogg-51b2c8d56ef0c460e96d2a203afaa6cd.oggstr"
+
+[deps]
+
+source_file="res://musik/Pomerainian_barking.ogg"
+dest_files=[ "res://.import/Pomerainian_barking.ogg-51b2c8d56ef0c460e96d2a203afaa6cd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

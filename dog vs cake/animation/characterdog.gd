@@ -43,9 +43,9 @@ func _physics_process(delta):
 		
 		#Kan inte komma ihåg vad denna gjorde.
 	velocity = lerp(velocity,direction * movement_speed, delta * acceleration)
-	if movement_speed == 0:
+	if movement_speed == 0 and flyingDog == false:
 		state_machine.travel("Idle")
-	elif movement_speed > 0 and vertical_velocity == 0:
+	elif movement_speed > 0 and vertical_velocity == 0 and flyingDog == false:
 		state_machine.travel("RUN")
 		
 		#Tror den gjorde hunden mer flytade när den byter riktning. 
@@ -82,13 +82,16 @@ func _physics_process(delta):
 		
 		
 	if Input.is_action_just_pressed("grab"):
-		$"Armature/Skeleton/doggo".visible = false
-		#$doggo_flyger.visible = true
-		#$CollisionShape_flying.disabled = false
+		#$"Armature/Skeleton/doggo".visible = false
+		$Armature/Skeleton/doggo/node_id12.visible = true
+		$Collision_balloon.disabled = false
 		flyingDog = true
 		if flyingDog == true:
 			dogGravity = false
-			
+	if dogGravity == false:
+		state_machine.travel("Flying")
+		$"Camera1".set_target($"Armature/2")
+		
 
 #Byter scen till the end när du nuddar tårtan
 func _on_Cake_body_entered(body):
@@ -105,6 +108,7 @@ func _on_balloons_body_entered(body):
 		flyingDog = true
 		if flyingDog == true:
 			dogGravity = false
+			
 
 
 func _on_cookie_body_entered(body):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://animation/Material_008.material" type="Material" id=1]
 [ext_resource path="res://animation/Material.material" type="Material" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://animation/Material_004.material" type="Material" id=7]
 [ext_resource path="res://animation/Material_006.material" type="Material" id=8]
 [ext_resource path="res://animation/characterdog.gd" type="Script" id=9]
+[ext_resource path="res://allaballongerna.tscn" type="PackedScene" id=10]
+[ext_resource path="res://musik/Pomerainian_barking.ogg" type="AudioStream" id=11]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Doggy"
@@ -2952,7 +2954,7 @@ switch_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id=23]
 states/Flying/node = SubResource( 14 )
-states/Flying/position = Vector2( 748, 114 )
+states/Flying/position = Vector2( 727, 116 )
 states/Idle/node = SubResource( 15 )
 states/Idle/position = Vector2( 478, 187 )
 states/RUN/node = SubResource( 16 )
@@ -2963,6 +2965,9 @@ transitions = [ "Idle", "jump", SubResource( 18 ), "jump", "Idle", SubResource( 
 start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=24]
+
+[sub_resource type="BoxShape" id=25]
+extents = Vector3( 0.141748, 2.22949, 0.0949926 )
 
 [node name="doggyrigg" type="KinematicBody"]
 script = ExtResource( 9 )
@@ -3174,6 +3179,16 @@ material/5 = null
 material/6 = null
 material/7 = null
 
+[node name="node_id12" parent="Armature/Skeleton/doggo" instance=ExtResource( 10 )]
+transform = Transform( 0.00291331, 0, 0, 0, 0.00301851, 0, 0, 0, 0.00265843, 0.00233549, 1.3032, -0.704916 )
+visible = false
+
+[node name="CameraTarget1" type="Spatial" parent="Armature"]
+transform = Transform( 1.13232e-08, 0.313628, -0.949546, -3.73998e-09, 0.949546, 0.313628, 1, 0, 1.19249e-08, -1.51582, 0.937117, 0 )
+
+[node name="2" type="Spatial" parent="Armature"]
+transform = Transform( -1.43679e-07, 0.471443, -0.881897, 7.68078e-08, 0.881897, 0.471443, 1, 0, -1.62921e-07, -1.80395, 1.50252, 0 )
+
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022295, 0.175175, 0.000962541 )
 shape = SubResource( 3 )
@@ -3195,3 +3210,17 @@ tree_root = SubResource( 23 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 24 )
+
+[node name="Collision_balloon" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.20345, 0 )
+shape = SubResource( 25 )
+disabled = true
+
+[node name="Camera1" type="InterpolatedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0726978, 2.88083, 4.34641 )
+target = NodePath("../Armature/CameraTarget1")
+enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 10.097

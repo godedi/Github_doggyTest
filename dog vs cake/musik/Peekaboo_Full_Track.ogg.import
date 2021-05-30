@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Peekaboo_Full_Track.ogg-8f5cf64c5d0f8e7e4f2f8c7ce283a74d.oggstr"
+
+[deps]
+
+source_file="res://musik/Peekaboo_Full_Track.ogg"
+dest_files=[ "res://.import/Peekaboo_Full_Track.ogg-8f5cf64c5d0f8e7e4f2f8c7ce283a74d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
