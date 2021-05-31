@@ -3,7 +3,7 @@
 [ext_resource path="res://HelVas.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://LösaBlommor.tscn" type="PackedScene" id=2]
 
-[node name="Spatial" type="Spatial"]
+[node name="BlomVas" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )

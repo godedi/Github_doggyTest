@@ -112,4 +112,4 @@ func _on_balloons_body_entered(body):
 
 func _on_cookie_body_entered(body):
 	if body.name == "doggo":
-		print("mums")
+		queue_free()
