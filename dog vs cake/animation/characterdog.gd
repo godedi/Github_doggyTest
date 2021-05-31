@@ -74,7 +74,9 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump"):
 			vertical_velocity = jump_magnitude
 			state_machine.travel("jump")
-			
+			#flyingDog = true
+			#yield(get_tree().create_timer(0.5), "timeout")
+			#flyingDog = false
 	
 	if Input.is_action_just_pressed("skall"):
 		$AudioStreamPlayer.play()
@@ -82,7 +84,6 @@ func _physics_process(delta):
 		
 		
 	if Input.is_action_just_pressed("grab"):
-		#$"Armature/Skeleton/doggo".visible = false
 		$Armature/Skeleton/doggo/node_id12.visible = true
 		$Collision_balloon.disabled = false
 		flyingDog = true
@@ -103,8 +104,6 @@ func _on_Cake_body_entered(body):
 func _on_balloons_body_entered(body):
 	if body.name == "dog":
 		$"Armature/Skeleton/doggo".visible = false
-		#$doggo_flyger.visible = true
-		#$CollisionShape_flying.disabled = false
 		flyingDog = true
 		if flyingDog == true:
 			dogGravity = false
@@ -112,5 +111,5 @@ func _on_balloons_body_entered(body):
 
 
 func _on_cookie_body_entered(body):
-	if body.name == "dog":
+	if body.name == "doggo":
 		print("mums")

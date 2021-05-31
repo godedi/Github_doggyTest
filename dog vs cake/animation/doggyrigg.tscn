@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://animation/Material_008.material" type="Material" id=1]
 [ext_resource path="res://animation/Material.material" type="Material" id=2]
@@ -2952,7 +2952,9 @@ switch_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=22]
 
-[sub_resource type="AnimationNodeStateMachine" id=23]
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachine" id=24]
 states/Flying/node = SubResource( 14 )
 states/Flying/position = Vector2( 727, 116 )
 states/Idle/node = SubResource( 15 )
@@ -2961,12 +2963,12 @@ states/RUN/node = SubResource( 16 )
 states/RUN/position = Vector2( 578, 73 )
 states/jump/node = SubResource( 17 )
 states/jump/position = Vector2( 344, 73 )
-transitions = [ "Idle", "jump", SubResource( 18 ), "jump", "Idle", SubResource( 19 ), "Idle", "RUN", SubResource( 20 ), "RUN", "Idle", SubResource( 21 ), "Idle", "Flying", SubResource( 22 ) ]
+transitions = [ "Idle", "jump", SubResource( 18 ), "jump", "Idle", SubResource( 19 ), "Idle", "RUN", SubResource( 20 ), "RUN", "Idle", SubResource( 21 ), "Idle", "Flying", SubResource( 22 ), "RUN", "jump", SubResource( 23 ) ]
 start_node = "Idle"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=25]
 
-[sub_resource type="BoxShape" id=25]
+[sub_resource type="BoxShape" id=26]
 extents = Vector3( 0.141748, 2.22949, 0.0949926 )
 
 [node name="doggyrigg" type="KinematicBody"]
@@ -3206,14 +3208,14 @@ anims/RootAction = SubResource( 12 )
 anims/jump = SubResource( 13 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 23 )
+tree_root = SubResource( 24 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 24 )
+parameters/playback = SubResource( 25 )
 
 [node name="Collision_balloon" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.20345, 0 )
-shape = SubResource( 25 )
+shape = SubResource( 26 )
 disabled = true
 
 [node name="Camera1" type="InterpolatedCamera" parent="."]

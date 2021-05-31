@@ -239,3 +239,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.96777, 1.08344, 0 )
 stream = ExtResource( 30 )
 volume_db = -10.097
 autoplay = true
+[connection signal="body_entered" from="cookie" to="doggo" method="_on_cookie_body_entered"]

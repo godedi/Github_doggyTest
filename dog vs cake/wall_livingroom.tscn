@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 15, 1, 15 )
+extents = Vector3( 0.68166, 0.179664, 1.57856 )
 
 [sub_resource type="CubeMesh" id=2]
 
@@ -9,7 +9,7 @@ extents = Vector3( 15, 1, 15 )
 transform = Transform( 0.956163, 0.0046826, 0.00483718, -0.00640452, 0.00335554, 0.724059, 0.00469075, -0.949923, 0.00258154, -0.424652, 9.99395, -35.9886 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, -4.65661e-10, 6.40284e-10, 0, 1, 0, 6.98492e-10, 0, 1, -1.32474, 3.8147e-06, -0.96458 )
+transform = Transform( 23.3514, 0.0890058, 0.0674734, 0.0901828, 5.15383, 0.0135127, 0.117657, 0.0232581, 10.0031, -1.32399, -0.154167, -0.963859 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
