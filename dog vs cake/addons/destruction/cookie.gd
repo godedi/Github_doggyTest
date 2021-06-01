@@ -13,6 +13,7 @@ func _on_cookie_body_entered(body):
 	if body.name == "doggo":
 		$AnimationPlayer.play("EAT")
 		$Timer.start()
+		$AudioStreamPlayer.play()
 
 
 func _on_Timer_timeout():

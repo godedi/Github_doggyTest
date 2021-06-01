@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://animation/doggyrigg.tscn" type="PackedScene" id=2]
@@ -8,13 +8,16 @@
 [ext_resource path="res://Kitchen_floor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://imported_blender/soffa.tscn" type="PackedScene" id=7]
 [ext_resource path="res://imported_blender/blomsterbord.tscn" type="PackedScene" id=8]
+[ext_resource path="res://imported_blender/tv (1).tscn" type="PackedScene" id=9]
 [ext_resource path="res://vittPaket.tscn" type="PackedScene" id=10]
 [ext_resource path="res://turqoisePaket.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Trashcan.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Trashcan-lid.tscn" type="PackedScene" id=13]
 [ext_resource path="res://imported_blender/bokhylla.tscn" type="PackedScene" id=14]
 [ext_resource path="res://imported_blender/Fonster.tscn" type="PackedScene" id=15]
+[ext_resource path="res://lampa.tscn" type="PackedScene" id=16]
 [ext_resource path="res://balloons.tscn" type="PackedScene" id=17]
+[ext_resource path="res://kok.tscn" type="PackedScene" id=18]
 [ext_resource path="res://möbler/GLTF format/table.glb" type="PackedScene" id=22]
 [ext_resource path="res://cookie.tscn" type="PackedScene" id=24]
 [ext_resource path="res://skies/the_sky_is_on_fire_1k.hdr" type="Texture" id=26]
@@ -28,10 +31,7 @@
 [ext_resource path="res://trasigvas2.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Counter.gd" type="Script" id=35]
 
-[sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.647059, 0.439216, 0.0352941, 1 )
-
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 12.0718, 1, 8.66988 )
 
 [sub_resource type="PanoramaSky" id=3]
@@ -93,13 +93,6 @@ width = 1.099
 height = 9.42589
 depth = 5.27126
 
-[node name="caketable" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.983009, 0.470199, -0.937559 )
-width = 5.98282
-height = 0.974144
-depth = 1.49541
-material = SubResource( 2 )
-
 [node name="window3" type="CSGBox" parent="CSGCombiner"]
 transform = Transform( 0.786273, 0, 0, 0, 0.13978, 0.00133208, 0, -0.00245226, 0.257326, -2.3695, 1.76826, 0.485002 )
 operation = 2
@@ -124,8 +117,8 @@ transform = Transform( 0.2, 0, 0, 0, 0.08, 0, 0, 0, 0.25, 1.23784, 0, 2.498 )
 transform = Transform( -0.370104, 0, 0, 0, -0.744602, 0, 0, 0, 0.49705, 3.90666, 1.84523, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Spatial"]
-transform = Transform( 1.53024, 0, 0, 0, 0.128881, 0, 0, 0, 1.296, 0, -1.52055, 0 )
-shape = SubResource( 1 )
+transform = Transform( 1.53024, 0, 0, 0, 0.128881, 0, 0, 0, 1.296, 0, -1.52055, 3.32686 )
+shape = SubResource( 2 )
 
 [node name="doggo" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75302, 0.12591, 5.5746 )
@@ -153,16 +146,7 @@ shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 transform = Transform( 1.84138, 0, 0, 0, 2.24285, 0, 0, 0, 2.463, -0.358885, 0.871985, 4.62643 )
 
 [node name="present" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 8.70731, 0.521941, 0.878352 )
-
-[node name="present2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.52014, 0.30303, -0.185074 )
-
-[node name="present3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.0356473, 1.59476e-05, -0.0350609, -1.57428e-05, 0.05, 6.73653e-06, 0.0350609, 6.23636e-06, 0.0356473, 6.16286, 0.30303, 2.41243 )
-
-[node name="present4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.96481, 0.30303, 2.6367 )
+transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.44037, 0.521941, 0.878352 )
 
 [node name="soffa" parent="." instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.52507, 0.110931, 4.36619 )
@@ -174,16 +158,16 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -
 transform = Transform( -4.93502e-08, 0, -1.4, 0, 1.23, 0, 1.129, 0, -6.11959e-08, 9.40273, 0.0669378, 2.56876 )
 
 [node name="Trashcannolid" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31354, 0.0689638, 1.38674 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48683, 0.0689638, 1.85689 )
 
 [node name="Trashcan-lid" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.578606, 0.5986, 2.84189 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58564, 0.863845, 1.77298 )
 
 [node name="Grind" parent="." instance=ExtResource( 27 )]
 transform = Transform( 7.54982e-08, 0, -1, 0, 0.86569, 0, 1, 0, 7.54982e-08, 3.98194, 0.0576421, 5.57417 )
 
 [node name="balloons" parent="." instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.74008, 1.7884, -1.19861 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.74008, 1.81116, -1.19861 )
 
 [node name="table" parent="." instance=ExtResource( 22 )]
 transform = Transform( 1.03253, 0, 0, 0, 2.3823, 0, 0, 0, 3.88446, -0.986444, 0, 5.15645 )
@@ -192,10 +176,10 @@ transform = Transform( 1.03253, 0, 0, 0, 2.3823, 0, 0, 0, 3.88446, -0.986444, 0,
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.74147, 0.376255, 0 )
 
 [node name="turqoisePaket" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2488, 0.108634, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2488, 0.375452, 1.29481 )
 
 [node name="vas" parent="." instance=ExtResource( 31 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03653, 1.22922, -0.329172 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03653, 1.22922, -0.71865 )
 
 [node name="destruction" type="Node" parent="vas"]
 script = ExtResource( 33 )
@@ -204,24 +188,24 @@ shard_scene = ExtResource( 34 )
 [node name="Cookies" type="Spatial" parent="."]
 
 [node name="kakburk" type="Spatial" parent="Cookies"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64674, 0.382848, 1.70016 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69063, -0.131006, 3.44515 )
 
 [node name="cookie" parent="Cookies/kakburk" instance=ExtResource( 24 )]
 
 [node name="kakburk2" type="Spatial" parent="Cookies"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.13263, 0.382848, -0.483615 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22143, 0.212469, 2.81877 )
 
 [node name="cookie" parent="Cookies/kakburk2" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="kakburk3" type="Spatial" parent="Cookies"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.16825, 0.382848, -2.75056 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.41735, 1.93343, 2.29298 )
 
 [node name="cookie" parent="Cookies/kakburk3" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="kakburk4" type="Spatial" parent="Cookies"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.36733, 0.382848, -4.56571 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43005, 0.27648, 1.9315 )
 
 [node name="cookie" parent="Cookies/kakburk4" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -263,6 +247,15 @@ script = ExtResource( 35 )
 stream = ExtResource( 30 )
 volume_db = -10.097
 autoplay = true
+
+[node name="tv " parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07585, 1.37676, -0.330409 )
+
+[node name="lampa" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14317, 0.913788, 1.57096 )
+
+[node name="kok" parent="." instance=ExtResource( 18 )]
+transform = Transform( 11.5, 0, 0, 0, 11.5, 0, 0, 0, 11.5, -1.94271, 0.0919055, -1.40842 )
 [connection signal="body_entered" from="Cookies/kakburk/cookie" to="Cookies/kakburk/cookie" method="_on_cookie_body_entered"]
 [connection signal="cookieCollected" from="Cookies/kakburk/cookie" to="Control/Counter" method="_on_cookie_cookieCollected"]
 [connection signal="body_entered" from="Cookies/kakburk2/cookie" to="Cookies/kakburk2/cookie" method="_on_cookie_body_entered"]
