@@ -1,12 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://HelVas.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://LösaBlommor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/BlommorIkruka_hel.gd" type="Script" id=3]
 
-[node name="BlomVas" type="Spatial"]
+[sub_resource type="CylinderShape" id=1]
+radius = 0.109931
+height = 0.301555
+
+[node name="BlomVas" type="RigidBody"]
+script = ExtResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )
 material/0 = null
 
 [node name="blommor" parent="." instance=ExtResource( 2 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.166327, 0 )
+shape = SubResource( 1 )
