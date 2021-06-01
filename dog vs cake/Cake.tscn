@@ -12,13 +12,13 @@ emission_operator = 0
 emission_on_uv2 = false
 
 [sub_resource type="CylinderShape" id=3]
-radius = 0.2062
-height = 0.234754
+radius = 0.116065
+height = 0.125145
 
 [node name="Cake" type="Area"]
 
 [node name="cakeMesh" type="MeshInstance" parent="."]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.0755447, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0755447, 0 )
 use_in_baked_light = true
 mesh = ExtResource( 1 )
 skin = SubResource( 1 )
@@ -36,5 +36,5 @@ material/10 = null
 material/11 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0508939, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0346626, 0 )
 shape = SubResource( 3 )

@@ -23,13 +23,12 @@ surfaces/0 = {
 }
 
 [sub_resource type="CylinderShape" id=3]
-radius = 0.992286
-height = 0.159921
+radius = 0.352813
+height = 0.107987
 
 [node name="Trashcan-lid" type="RigidBody"]
 
 [node name="Lid" type="MeshInstance" parent="."]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 
