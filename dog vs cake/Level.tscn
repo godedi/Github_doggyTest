@@ -107,6 +107,13 @@ width = 1.099
 height = 9.42589
 depth = 5.27126
 
+[node name="window5" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 0.786273, 0, 0, 0, 0.13978, 0.00133208, 0, -0.00245226, 0.257326, 3.79949, 1.41724, -0.880694 )
+operation = 2
+width = 1.099
+height = 5.10644
+depth = 3.05505
+
 [node name="window4" type="CSGBox" parent="CSGCombiner"]
 transform = Transform( -3.43691e-08, 0.00245226, -0.257326, 0, 0.13978, 0.00133208, 0.786273, 1.07192e-10, -1.12481e-08, 6.53147, 1.76826, -1.86085 )
 operation = 2
