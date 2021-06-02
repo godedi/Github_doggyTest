@@ -92,11 +92,15 @@ func _on_Cake_body_entered(body):
 
 # Byter till flyg animationen när hunden träffar ballongerna.
 func _on_balloons_body_entered(body):
-	if body.name == "dog":
-		$"Armature/Skeleton/doggo".visible = false
+	if body.name == "doggo":
+		$Armature/Skeleton/doggo/node_id12.visible = true
+		$Collision_balloon.disabled = false
 		flyingDog = true
 		if flyingDog == true:
 			dogGravity = false
+	if dogGravity == false:
+		state_machine.travel("Flying")
+		$"Camera1".set_target($"Armature/2")
 			
 
 	# Gör så att kakorna försvinner när hunden träffar dem.

@@ -18,7 +18,7 @@ surfaces/0 = {
 }
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 1.58315, 1.32727, 0.0914019 )
+extents = Vector3( 1.6381, 1.39229, 0.0314346 )
 
 [node name="Grind" type="StaticBody"]
 
@@ -27,5 +27,5 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.236076, 0, 0, 0, 0.236076, 0, 0, 0, 1, 0.00790349, 0.348944, -0.0113865 )
+transform = Transform( 0.236076, 0, 0, 0, 0.236076, 0, 0, 0, 1, -0.00300878, 0.330673, -0.000378952 )
 shape = SubResource( 2 )
