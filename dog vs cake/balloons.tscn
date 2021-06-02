@@ -9,8 +9,8 @@
 [ext_resource path="res://massa färger/70.material" type="Material" id=7]
 
 [sub_resource type="CylinderShape" id=1]
-radius = 0.635368
-height = 1.75225
+radius = 0.235995
+height = 0.662093
 
 [sub_resource type="ArrayMesh" id=2]
 surfaces/0 = {
@@ -85,7 +85,7 @@ surfaces/0 = {
 [node name="balloons" type="Area"]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.810335, 0, 0, 0, 0.911652, 0, 0, 0, 0.814926, 0, 1.97247, -0.11803 )
+transform = Transform( 0.810335, 0, 0, 0, 0.911652, 0, 0, 0, 0.814926, 0, 0.62724, -0.0235388 )
 shape = SubResource( 1 )
 
 [node name="Mesh" type="MeshInstance" parent="."]

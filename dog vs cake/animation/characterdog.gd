@@ -70,23 +70,10 @@ func _physics_process(delta):
 	# gör så att hunden skäller.
 	if Input.is_action_just_pressed("skall"):
 		$AudioStreamPlayer.play()
-		
-		
-		# Tillfällig kod för att flyga. 
-	if Input.is_action_just_pressed("grab"):
-		$Armature/Skeleton/doggo/node_id12.visible = true
-		$Collision_balloon.disabled = false
-		flyingDog = true
-		if flyingDog == true:
-			dogGravity = false
-	if dogGravity == false:
-		state_machine.travel("Flying")
-		$"Camera1".set_target($"Armature/2")
-		
 
 #Byter scen till the end när du träffar tårtan
 func _on_Cake_body_entered(body):
-	if body.name == "dog":
+	if body.name == "doggo":
 		get_tree().change_scene("res://TheEnd.tscn")
 	
 
@@ -103,7 +90,3 @@ func _on_balloons_body_entered(body):
 		$"Camera1".set_target($"Armature/2")
 			
 
-	# Gör så att kakorna försvinner när hunden träffar dem.
-func _on_cookie_body_entered(body):
-	if body.name == "doggo":
-		queue_free()

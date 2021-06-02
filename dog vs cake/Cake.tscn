@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://.import/Game-Cake.tres" type="ArrayMesh" id=1]
+[ext_resource path="res://Cake.gd" type="Script" id=2]
 
 [sub_resource type="Skin" id=1]
 
@@ -12,10 +13,11 @@ emission_operator = 0
 emission_on_uv2 = false
 
 [sub_resource type="CylinderShape" id=3]
-radius = 0.116065
-height = 0.125145
+radius = 0.0808479
+height = 0.0976967
 
 [node name="Cake" type="Area"]
+script = ExtResource( 2 )
 
 [node name="cakeMesh" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0755447, 0 )
