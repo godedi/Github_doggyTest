@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://animation/doggyrigg.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://kok.tscn" type="PackedScene" id=18]
 [ext_resource path="res://testmöbleer/Tv-Bord.tscn" type="PackedScene" id=19]
 [ext_resource path="res://blomsterbordIgen.tscn" type="PackedScene" id=20]
+[ext_resource path="res://koksbord.tscn" type="PackedScene" id=21]
 [ext_resource path="res://möbler/GLTF format/table.glb" type="PackedScene" id=22]
 [ext_resource path="res://cookie.tscn" type="PackedScene" id=24]
 [ext_resource path="res://skies/the_sky_is_on_fire_1k.hdr" type="Texture" id=26]
@@ -275,6 +276,9 @@ transform = Transform( 3.57746e-08, 0, -3, 0, 3, 0, 3, 0, 3.57746e-08, 4.328, 0.
 
 [node name="bokhyllautan_vaxt" parent="." instance=ExtResource( 8 )]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 6.30179, 0.110721, -0.922368 )
+
+[node name="koksbord" parent="." instance=ExtResource( 21 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 1.27576, 0.0784913, 3.72879 )
 [connection signal="body_entered" from="balloons" to="doggo" method="_on_balloons_body_entered"]
 [connection signal="body_entered" from="Cookies/kakburk/cookie" to="Cookies/kakburk/cookie" method="_on_cookie_body_entered"]
 [connection signal="cookieCollected" from="Cookies/kakburk/cookie" to="Control/Counter" method="_on_cookie_cookieCollected"]
