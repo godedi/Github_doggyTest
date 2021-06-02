@@ -10,6 +10,8 @@ height = 0.301555
 
 [node name="BlomVas" type="RigidBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.201268, 0 )
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
@@ -21,3 +23,4 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.166327, 0 )
 shape = SubResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_BlomVas_body_entered"]

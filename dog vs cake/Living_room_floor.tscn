@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Living_room_floor.gd" type="Script" id=1]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 15 )
@@ -8,6 +10,7 @@ size = Vector3( 30, 2, 30 )
 
 [node name="KitchenFloor" type="StaticBody"]
 transform = Transform( 0.45613, 0, 0, 0, 0.080468, 0, 0, 0, 0.589639, 7.42197, -0.0264707, 0 )
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32474, -0.227437, -0.964581 )

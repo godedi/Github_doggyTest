@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://animation/Material_008.material" type="Material" id=1]
 [ext_resource path="res://animation/Material.material" type="Material" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://animation/characterdog.gd" type="Script" id=9]
 [ext_resource path="res://allaballongerna.tscn" type="PackedScene" id=10]
 [ext_resource path="res://musik/Pomerainian_barking.ogg" type="AudioStream" id=11]
+[ext_resource path="res://CameraTarget1.gd" type="Script" id=12]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Doggy"
@@ -3187,6 +3188,7 @@ visible = false
 
 [node name="CameraTarget1" type="Spatial" parent="Armature"]
 transform = Transform( 1.13232e-08, 0.313628, -0.949546, -3.73998e-09, 0.949546, 0.313628, 1, 0, 1.19249e-08, -1.51582, 0.937117, 0 )
+script = ExtResource( 12 )
 
 [node name="2" type="Spatial" parent="Armature"]
 transform = Transform( -1.43679e-07, 0.471443, -0.881897, 7.68078e-08, 0.881897, 0.471443, 1, 0, -1.62921e-07, -1.80395, 1.50252, 0 )
@@ -3221,6 +3223,7 @@ disabled = true
 [node name="Camera1" type="InterpolatedCamera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0726978, 2.88083, 4.34641 )
 target = NodePath("../Armature/CameraTarget1")
+speed = 3.0
 enabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
