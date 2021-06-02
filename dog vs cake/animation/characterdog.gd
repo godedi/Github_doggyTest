@@ -31,9 +31,12 @@ func _physics_process(delta):
 				Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")).normalized()
 		
 		movement_speed = walk_speed
-		state_machine.travel("RUN")
 	else:
 		movement_speed = 0
+		
+	if movement_speed == walk_speed and flyingDog == false:
+		state_machine.travel("RUN")
+	
 		
 	# ?
 	velocity = lerp(velocity,direction * movement_speed, delta * acceleration)

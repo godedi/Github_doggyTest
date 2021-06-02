@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://animation/doggyrigg.tscn" type="PackedScene" id=2]
@@ -21,7 +21,6 @@
 [ext_resource path="res://testmöbleer/Tv-Bord.tscn" type="PackedScene" id=19]
 [ext_resource path="res://blomsterbordIgen.tscn" type="PackedScene" id=20]
 [ext_resource path="res://koksbord.tscn" type="PackedScene" id=21]
-[ext_resource path="res://tableTable.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scripts/balloons.gd" type="Script" id=23]
 [ext_resource path="res://cookie.tscn" type="PackedScene" id=24]
 [ext_resource path="res://papperspase.tscn" type="PackedScene" id=25]
@@ -113,7 +112,7 @@ height = 9.42589
 depth = 5.27126
 
 [node name="window5" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 0.786273, 0, 0, 0, 0.13978, 0.00133208, 0, -0.00245226, 0.257326, 3.79949, 1.41724, -0.880694 )
+transform = Transform( 0.786273, 0, 0, 0, 0.13978, 0.00133208, 0, -0.00245226, 0.257326, 3.79949, 2.31252, -0.880694 )
 operation = 2
 width = 1.099
 height = 5.10644
@@ -144,7 +143,7 @@ transform = Transform( 1.53024, 0, 0, 0, -5.63357e-09, 0.865129, 0, -0.193069, -
 shape = SubResource( 1 )
 
 [node name="doggo" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8885, 0.285464, 3.28252 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39012, 0.311541, 3.44277 )
 
 [node name="Fonster" parent="." instance=ExtResource( 15 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.07224, 1.17226, 4.49127 )
@@ -166,35 +165,35 @@ shadow_enabled = true
 shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 
 [node name="Cake" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1.84138, 0, 0, 0, 2.24285, 0, 0, 0, 2.463, -1.4176, 1.23049, 3.72605 )
+transform = Transform( 1.84138, 0, 0, 0, 2.24285, 0, 0, 0, 2.463, -1.14323, 1.23049, 4.51939 )
 
 [node name="present" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 6.61575, 1.44304, -1.07393 )
+transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.10275, 1.44304, -1.23371 )
 
 [node name="soffa" parent="." instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.52507, 0.110931, 1.72569 )
 
 [node name="Trashcannolid" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26435, 0.0689638, 1.85689 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.474156, 0.173506, 2.50379 )
 
 [node name="Trashcan-lid" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.331393, 0.863845, 1.77298 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3936, 0.863845, 1.77298 )
 
 [node name="Grind" parent="." instance=ExtResource( 27 )]
 transform = Transform( 7.54982e-08, 0, -1, 0, 1.29188, 0, 1.11965, 0, 8.45314e-08, 4.01884, 0.0576421, 4.12791 )
 
 [node name="balloons" parent="." instance=ExtResource( 17 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.26534, 1.36786, -1.16779 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.81984, 0.177722, 0.62704 )
 script = ExtResource( 23 )
 
 [node name="vittPaket" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.13785, 0.376255, 0 )
 
 [node name="turqoisePaket" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2488, 0.375452, 1.29481 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2488, 0.528309, 1.29481 )
 
 [node name="vas" parent="." instance=ExtResource( 31 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54203, 1.11717, -0.710709 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.32207, 1.11717, 0.358105 )
 
 [node name="destruction" type="Node" parent="vas"]
 script = ExtResource( 33 )
@@ -214,7 +213,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22143, 0.212469, 2.81877 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="kakburk3" type="Spatial" parent="Cookies"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.41735, 1.93343, 2.29298 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.22565, 1.35655, 0.627439 )
 
 [node name="cookie" parent="Cookies/kakburk3" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.148385, 0 )
@@ -276,22 +275,22 @@ transform = Transform( 11.5, 0, 0, 0, 11.5, 0, 0, 0, 11.5, -1.94271, 0.0919055, 
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.56282, 0.127122, 1.78702 )
 
 [node name="blomsterbordIgen" parent="." instance=ExtResource( 20 )]
-transform = Transform( 0.128472, 0, 1.99587, 0, 2, 0, -1.99587, 0, 0.128472, 4.02097, 0.562948, -0.882166 )
+transform = Transform( 0.128472, 0, 1.99587, 0, 2, 0, -1.99587, 0, 0.128472, 8.86189, 0.562948, 0.220107 )
 
 [node name="kylskåp" parent="." instance=ExtResource( 14 )]
-transform = Transform( 3.57746e-08, 0, -3, 0, 3, 0, 3, 0, 3.57746e-08, 4.328, 0.852346, 2.38621 )
+transform = Transform( 3.99985, 0, 0.0340689, 0, 4, 0, -0.0340689, 0, 3.99985, 3.43136, 0.852346, -1.79059 )
 
 [node name="bokhyllautan_vaxt" parent="." instance=ExtResource( 8 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 8.03869, 0.110721, -1.31859 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4.80367, 0.110721, -1.31859 )
 
 [node name="koksbord" parent="." instance=ExtResource( 21 )]
-transform = Transform( -6.51683e-07, 0, 4, 0, 4, 0, -4, 0, -6.51683e-07, -1.40703, 0.0784913, 3.72879 )
+transform = Transform( -3.99974, 0, -0.0457972, 0, 4, 0, 0.0457972, 0, -3.99974, -0.92665, 0.0784913, 4.57409 )
 
 [node name="matta (4)" parent="." instance=ExtResource( 37 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.72471, 0.0509653, 3.06183 )
 
 [node name="skrappase" parent="." instance=ExtResource( 38 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0215, 0.261433, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30877, 1.36332, -0.891246 )
 
 [node name="papperspase" parent="." instance=ExtResource( 25 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.698782, 0.763076, 1.76371 )
@@ -303,16 +302,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.271021, 1.04143 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.871911, 0.944643, 2.5784 )
 
 [node name="appelskrutt" parent="." instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.849569, 2.30164 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840376, 0.849569, 2.30164 )
 
 [node name="servett" parent="." instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174878, 0.20697, 2.15105 )
 
-[node name="table" parent="." instance=ExtResource( 22 )]
-transform = Transform( 2.40481, 0, 0, 0, 3.89439, 0, 0, 0, 1.65738, 5.35269, 0, -0.713663 )
-
 [node name="stol" parent="." instance=ExtResource( 42 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -0.821976, 0.754782, 2.98151 )
+transform = Transform( 0.00586425, 0, 2.99999, 0, 3, 0, -2.99999, 0, 0.00586425, -1.29184, 0.754782, 4.14586 )
 [connection signal="body_entered" from="Cake" to="doggo" method="_on_Cake_body_entered"]
 [connection signal="body_entered" from="balloons" to="balloons" method="_on_balloons_body_entered"]
 [connection signal="body_entered" from="balloons" to="doggo" method="_on_balloons_body_entered"]

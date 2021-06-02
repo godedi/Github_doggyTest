@@ -35,21 +35,21 @@ surfaces/0 = {
 }
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 1.85927, 0.634759, 0.971759 )
+extents = Vector3( 0.289432, 0.0940492, 0.137172 )
 
 [node name="turqoisePaket" type="RigidBody"]
 script = ExtResource( 3 )
 
 [node name="Mesh" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000268779, 0.0667185, 0.256225 )
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.000268779, 0.0667185, 0.256225 )
 mesh = SubResource( 1 )
 material/0 = null
 
-[node name="Mesh 2" type="MeshInstance" parent="Mesh"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+[node name="Mesh 2" type="MeshInstance" parent="."]
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.000268779, 0.0667185, 0.256225 )
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00863207, -0.0576679, 0.256814 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.261453 )
 shape = SubResource( 3 )
