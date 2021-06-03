@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://animation/doggyrigg.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://testmöbleer/Tv-Bord.tscn" type="PackedScene" id=19]
 [ext_resource path="res://blomsterbordIgen.tscn" type="PackedScene" id=20]
 [ext_resource path="res://koksbord.tscn" type="PackedScene" id=21]
+[ext_resource path="res://animation/smoke_08.png" type="Texture" id=22]
 [ext_resource path="res://scripts/balloons.gd" type="Script" id=23]
 [ext_resource path="res://cookie.tscn" type="PackedScene" id=24]
 [ext_resource path="res://papperspase.tscn" type="PackedScene" id=25]
@@ -52,16 +53,55 @@ panorama = ExtResource( 26 )
 background_mode = 2
 background_sky = SubResource( 2 )
 ambient_light_color = Color( 0.733333, 0.403922, 0.301961, 1 )
-ambient_light_sky_contribution = 0.51
+ambient_light_energy = 1.88
+ambient_light_sky_contribution = 0.15
 auto_exposure_enabled = true
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="PhysicsMaterial" id=4]
+bounce = -4.0
+
+[sub_resource type="DynamicFont" id=5]
 size = 75
 font_data = ExtResource( 28 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 80
 font_data = ExtResource( 28 )
+
+[sub_resource type="SpatialMaterial" id=7]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 0.576471, 0.576471, 0.576471, 1 )
+albedo_texture = ExtResource( 22 )
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0, 0.2, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.347619, 0.347619, 0.347619, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=9]
+gradient = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=10]
+emission_shape = 1
+emission_sphere_radius = 0.2
+gravity = Vector3( 0, 1, 0 )
+angular_velocity = 18.69
+angular_velocity_random = 1.0
+linear_accel = 1.0
+color_ramp = SubResource( 9 )
+
+[sub_resource type="QuadMesh" id=11]
+
+[sub_resource type="PhysicsMaterial" id=12]
+bounce = -2.0
+
+[sub_resource type="PhysicsMaterial" id=13]
+bounce = -2.0
 
 [node name="Level" type="Spatial"]
 script = ExtResource( 32 )
@@ -133,6 +173,7 @@ transform = Transform( 0.2, 0, 0, 0, 0.08, 0, 0, 0, 0.25, 1.23784, 0, 2.498 )
 
 [node name="Spatial" type="StaticBody" parent="."]
 transform = Transform( -0.370104, 0, 0, 0, -0.744602, 0, 0, 0, 0.49705, 3.90666, 1.84523, 0 )
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Spatial"]
 transform = Transform( 1.53024, 0, 0, 0, 0.128881, 0, 0, 0, 1.296, 0, -1.52055, 3.32686 )
@@ -143,7 +184,7 @@ transform = Transform( 1.53024, 0, 0, 0, -5.63357e-09, 0.865129, 0, -0.193069, -
 shape = SubResource( 1 )
 
 [node name="doggo" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39012, 0.311541, 3.44277 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67545, 0.311541, 3.44277 )
 
 [node name="Fonster" parent="." instance=ExtResource( 15 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.07224, 1.17226, 4.49127 )
@@ -174,10 +215,11 @@ transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.10275, 1.44304, -1.
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.52507, 0.110931, 1.72569 )
 
 [node name="Trashcannolid" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.474156, 0.173506, 2.50379 )
+transform = Transform( 1, -7.35137e-08, 0, 7.35137e-08, 1, 0, 0, 0, 1, -0.474156, 0.681039, 2.50379 )
+physics_material_override = SubResource( 4 )
 
 [node name="Trashcan-lid" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3936, 0.863845, 1.77298 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.554132, 0.942926, 2.47441 )
 
 [node name="Grind" parent="." instance=ExtResource( 27 )]
 transform = Transform( 7.54982e-08, 0, -1, 0, 1.29188, 0, 1.11965, 0, 8.45314e-08, 4.01884, 0.0576421, 4.12791 )
@@ -185,6 +227,8 @@ transform = Transform( 7.54982e-08, 0, -1, 0, 1.29188, 0, 1.11965, 0, 8.45314e-0
 [node name="balloons" parent="." instance=ExtResource( 17 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.81984, 0.177722, 0.62704 )
 script = ExtResource( 23 )
+
+[node name="Particles" type="Particles" parent="balloons"]
 
 [node name="vittPaket" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.13785, 0.376255, 0 )
@@ -243,7 +287,7 @@ margin_left = 1093.0
 margin_top = 613.909
 margin_right = 1151.0
 margin_bottom = 692.909
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.00784314, 0, 0, 1 )
 text = "x"
 
@@ -252,7 +296,7 @@ margin_left = 1157.0
 margin_top = 619.0
 margin_right = 1278.0
 margin_bottom = 704.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Q"
 script = ExtResource( 35 )
@@ -265,8 +309,24 @@ autoplay = true
 [node name="tv " parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.592, 0.807174, 1.78975 )
 
+[node name="rök" type="Particles" parent="tv "]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9078, 0.286412, 1.89201 )
+material_override = SubResource( 7 )
+lifetime = 1.28
+explosiveness = 0.1
+randomness = 0.17
+visibility_aabb = AABB( -0.815969, -0.233848, -0.379852, 1.4962, 0.761641, 1.10638 )
+process_material = SubResource( 10 )
+draw_pass_1 = SubResource( 11 )
+
 [node name="lampa" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.42252, 0.913788, 2.87368 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47253, 0.913788, 2.65916 )
+
+[node name="OmniLight" type="OmniLight" parent="lampa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0446177, 0.5679, 0 )
+light_color = Color( 1, 0.713726, 0.34902, 1 )
+light_energy = 2.17
+omni_range = 1.78851
 
 [node name="kok" parent="." instance=ExtResource( 18 )]
 transform = Transform( 11.5, 0, 0, 0, 11.5, 0, 0, 0, 11.5, -1.94271, 0.0919055, -1.40842 )
@@ -293,25 +353,27 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.72471, 0.0509653, 3.06183 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30877, 1.36332, -0.891246 )
 
 [node name="papperspase" parent="." instance=ExtResource( 25 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.698782, 0.763076, 1.76371 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.537167, 0.308995, 1.94292 )
+physics_material_override = SubResource( 12 )
 
 [node name="tomburk" parent="." instance=ExtResource( 36 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.271021, 1.04143 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.579626, 0.78595, 2.40749 )
+physics_material_override = SubResource( 13 )
 
 [node name="bananskal" parent="." instance=ExtResource( 40 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.871911, 0.944643, 2.5784 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.648647, 0.125381, 2.52642 )
 
 [node name="appelskrutt" parent="." instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840376, 0.849569, 2.30164 )
+transform = Transform( 0.999889, -0.0148697, 0, 0.0148697, 0.999889, 0, 0, 0, 1, -0.410321, 0.80811, 2.51634 )
 
 [node name="servett" parent="." instance=ExtResource( 41 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174878, 0.20697, 2.15105 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188396, 0.236977, 2.45648 )
 
 [node name="stol" parent="." instance=ExtResource( 42 )]
 transform = Transform( 0.00586425, 0, 2.99999, 0, 3, 0, -2.99999, 0, 0.00586425, -1.29184, 0.754782, 4.14586 )
 [connection signal="body_entered" from="Cake" to="doggo" method="_on_Cake_body_entered"]
-[connection signal="body_entered" from="balloons" to="balloons" method="_on_balloons_body_entered"]
 [connection signal="body_entered" from="balloons" to="doggo" method="_on_balloons_body_entered"]
+[connection signal="body_entered" from="balloons" to="balloons" method="_on_balloons_body_entered"]
 [connection signal="body_entered" from="Cookies/kakburk/cookie" to="Cookies/kakburk/cookie" method="_on_cookie_body_entered"]
 [connection signal="cookieCollected" from="Cookies/kakburk/cookie" to="Control/Counter" method="_on_cookie_cookieCollected"]
 [connection signal="body_entered" from="Cookies/kakburk2/cookie" to="Cookies/kakburk2/cookie" method="_on_cookie_body_entered"]

@@ -51,14 +51,14 @@ surfaces/0 = {
 }
 
 [sub_resource type="CylinderShape" id=4]
-radius = 0.188565
-height = 0.471237
+radius = 0.043658
+height = 0.0810302
 
 [node name="tomburk" type="RigidBody"]
 script = ExtResource( 4 )
 
 [node name="Mesh" type="MeshInstance" parent="."]
-transform = Transform( 4.33741, 0, 0, 0, 4.33741, 0, 0, 0, 4.33741, 0, 0, 0 )
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 
@@ -71,5 +71,5 @@ mesh = SubResource( 3 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( -1.62921e-07, 1, -1.62921e-07, 0, -1.62921e-07, -1, -1, -1.62921e-07, 2.65431e-14, 0, 0.200011, 0 )
+transform = Transform( -1.62921e-07, 1, -1.62921e-07, 0, -1.62921e-07, -1, -1, -1.62921e-07, 2.65431e-14, 0, 0.0363293, 0 )
 shape = SubResource( 4 )

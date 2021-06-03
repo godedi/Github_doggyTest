@@ -26,7 +26,7 @@ surfaces/0 = {
 
 [sub_resource type="CylinderShape" id=3]
 radius = 0.352813
-height = 0.107987
+height = 0.0405939
 
 [node name="Trashcan-lid" type="RigidBody"]
 script = ExtResource( 1 )
@@ -36,5 +36,5 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0740944, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0691125, 0 )
 shape = SubResource( 3 )

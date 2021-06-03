@@ -89,55 +89,72 @@ points = PoolVector3Array( -0.325544, 0.751647, -0.00834869, -0.325544, 0.751647
 points = PoolVector3Array( -0.325544, 0.751647, -0.0350084, -0.325544, 0.751647, -0.00841111, -0.325544, 0.831337, -0.0350084, -0.325544, 0.844627, -0.00841111, -0.312241, 0.751647, -0.11474, -0.298965, 0.685196, -0.00841111, -0.298965, 0.844627, -0.141338, -0.285662, 0.671906, -0.0615758, -0.285662, 0.751647, -0.167875, -0.285662, 0.831337, -0.167875, -0.272359, 0.671906, -0.11474, -0.259083, 0.671906, -0.141338, -0.259083, 0.844627, -0.00841111, -0.252003, 0.662914, 0.00750153, -0.24578, 0.751647, -0.22101, -0.24578, 0.778177, -0.00841111, -0.24578, 0.831337, -0.22101, -0.232504, 0.685196, -0.194443, -0.219201, 0.751647, -0.247607, -0.219201, 0.831337, -0.247607, -0.192649, 0.844627, -0.260891, -0.179373, 0.671906, -0.234264, -0.152821, 0.685196, -0.260891, -0.139518, 0.751647, -0.300712, -0.139518, 0.831337, -0.300712, -0.112939, 0.671906, -0.274175, -0.08636, 0.685196, -0.287458, -0.08636, 0.751647, -0.314056, -0.0730568, 0.844627, -0.314056, -0.0485078, 0.673162, -0.272531, -0.0464778, 0.671906, -0.234264, -0.0464778, 0.738357, -0.234264, -0.0464778, 0.751647, -0.314056, -0.0464778, 0.844627, -0.314056, -0.0464778, 0.844627, -0.247607 )
 
 [node name="Trashcannolid" type="RigidBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.363962, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.337426, 0 )
+gravity_scale = 3.0
 script = ExtResource( 1 )
 
 [node name="Trashcan" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
 
 [node name="CollisionShape15" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape14" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape13" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 6 )
 
 [node name="CollisionShape12" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 7 )
 
 [node name="CollisionShape11" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape10" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 9 )
 
 [node name="CollisionShape9" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 10 )
 
 [node name="CollisionShape8" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 11 )
 
 [node name="CollisionShape7" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 12 )
 
 [node name="CollisionShape6" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 13 )
 
 [node name="CollisionShape5" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 14 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 15 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 16 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 17 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.565891, 0 )
 shape = SubResource( 18 )
