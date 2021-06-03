@@ -267,7 +267,7 @@ points = PoolVector3Array( -0.161658, 0.46, 0.19944, -0.161454, 0.456639, 0.1499
 [sub_resource type="ConvexPolygonShape" id=80]
 points = PoolVector3Array( -0.150495, 0.28611, -0.21275, -0.150495, 0.28611, -0.161314, -0.150495, 0.445569, -0.202455, -0.150495, 0.445569, -0.151031, -0.145351, 0.28611, -0.21275, -0.145351, 0.28611, -0.161314, -0.140208, 0.37355, -0.207597, -0.140208, 0.37355, -0.156172, -0.140208, 0.445569, -0.202455, -0.140208, 0.445569, -0.151031 )
 
-[node name="stol" type="StaticBody"]
+[node name="stol" type="RigidBody"]
 
 [node name="Mesh" type="MeshInstance" parent="."]
 transform = Transform( 0.513011, 0, 0, 0, 0.513011, 0, 0, 0, 0.513011, -0.00932877, -0.256299, 0.256 )
@@ -275,7 +275,6 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="Mesh 2" type="MeshInstance" parent="Mesh"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 

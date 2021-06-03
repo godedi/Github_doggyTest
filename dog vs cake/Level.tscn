@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://animation/doggyrigg.tscn" type="PackedScene" id=2]
@@ -17,7 +17,7 @@
 [ext_resource path="res://imported_blender/Fonster.tscn" type="PackedScene" id=15]
 [ext_resource path="res://lampa.tscn" type="PackedScene" id=16]
 [ext_resource path="res://balloons.tscn" type="PackedScene" id=17]
-[ext_resource path="res://kok.tscn" type="PackedScene" id=18]
+[ext_resource path="res://imported_blender/mer grejer/Monstera.tscn" type="PackedScene" id=18]
 [ext_resource path="res://testmöbleer/Tv-Bord.tscn" type="PackedScene" id=19]
 [ext_resource path="res://blomsterbordIgen.tscn" type="PackedScene" id=20]
 [ext_resource path="res://koksbord.tscn" type="PackedScene" id=21]
@@ -43,6 +43,7 @@
 [ext_resource path="res://servett.tscn" type="PackedScene" id=41]
 [ext_resource path="res://stol.tscn" type="PackedScene" id=42]
 [ext_resource path="res://animation/star_08.png" type="Texture" id=43]
+[ext_resource path="res://imported_blender/mer grejer/kok.tscn" type="PackedScene" id=45]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 12.0718, 1, 8.66988 )
@@ -212,7 +213,7 @@ transform = Transform( 1.53024, 0, 0, 0, -5.63357e-09, 0.865129, 0, -0.193069, -
 shape = SubResource( 1 )
 
 [node name="doggo" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0903, 0.311541, 3.44277 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96101, 0.311541, 3.44277 )
 
 [node name="Fonster" parent="." instance=ExtResource( 15 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.07224, 1.17226, 4.49127 )
@@ -237,7 +238,7 @@ shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 transform = Transform( 1.84138, 0, 0, 0, 2.24285, 0, 0, 0, 2.463, -1.14323, 1.23049, 4.51939 )
 
 [node name="present" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.10275, 1.44304, -1.23371 )
+transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.10275, 0.258851, -1.23371 )
 
 [node name="soffa" parent="." instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.52507, 0.110931, 1.72569 )
@@ -364,9 +365,6 @@ light_color = Color( 1, 0.713726, 0.34902, 1 )
 light_energy = 2.17
 omni_range = 1.78851
 
-[node name="kok" parent="." instance=ExtResource( 18 )]
-transform = Transform( 11.5, 0, 0, 0, 11.5, 0, 0, 0, 11.5, -1.94271, 0.0919055, -1.40842 )
-
 [node name="Tv-Bord" parent="." instance=ExtResource( 19 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.56282, 0.127122, 1.78702 )
 
@@ -386,7 +384,7 @@ transform = Transform( -3.99974, 0, -0.0457972, 0, 4, 0, 0.0457972, 0, -3.99974,
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.72471, 0.0509653, 3.06183 )
 
 [node name="skrappase" parent="." instance=ExtResource( 38 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30877, 1.36332, -0.891246 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30877, 0.906103, -0.891246 )
 
 [node name="papperspase" parent="." instance=ExtResource( 25 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.537167, 0.308995, 1.94292 )
@@ -407,6 +405,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188396, 0.236977, 2.45648 )
 
 [node name="stol" parent="." instance=ExtResource( 42 )]
 transform = Transform( 0.00586425, 0, 2.99999, 0, 3, 0, -2.99999, 0, 0.00586425, -1.29184, 0.754782, 4.14586 )
+
+[node name="Monstera" parent="." instance=ExtResource( 18 )]
+transform = Transform( 0.977202, 0, -0.212314, 0, 1, 0, 0.212314, 0, 0.977202, 9.25214, 0, 2.97233 )
+
+[node name="kok" parent="." instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.00401, 0, -1.49078 )
 [connection signal="body_entered" from="Cake" to="doggo" method="_on_Cake_body_entered"]
 [connection signal="body_entered" from="balloons" to="doggo" method="_on_balloons_body_entered"]
 [connection signal="body_entered" from="balloons" to="balloons" method="_on_balloons_body_entered"]
