@@ -9,7 +9,7 @@
 [ext_resource path="res://massa färger/70.material" type="Material" id=7]
 
 [sub_resource type="CylinderShape" id=1]
-radius = 0.235995
+radius = 0.493015
 height = 0.662093
 
 [sub_resource type="ArrayMesh" id=2]

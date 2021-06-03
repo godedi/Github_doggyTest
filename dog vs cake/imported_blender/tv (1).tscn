@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://imported_blender/69.material" type="Material" id=1]
 [ext_resource path="res://imported_blender/43.material" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://imported_blender/77.material" type="Material" id=4]
 [ext_resource path="res://imported_blender/75.material" type="Material" id=5]
 [ext_resource path="res://imported_blender/71.material" type="Material" id=6]
+[ext_resource path="res://scripts/tv (1).gd" type="Script" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -92,9 +93,14 @@ surfaces/0 = {
 }
 
 [sub_resource type="BoxShape" id=7]
-extents = Vector3( 0.128583, 0.187002, 0.207785 )
+extents = Vector3( 0.16001, 0.329239, 0.288638 )
 
 [node name="tv " type="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.142321, -0.101581, 0 )
+mass = 1.22449
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 7 )
 
 [node name="Mesh" type="MeshInstance" parent="."]
 transform = Transform( -4.07302e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -4.07302e-07, -0.00583268, -0.145484, 0.00602356 )
@@ -123,5 +129,5 @@ mesh = SubResource( 6 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0751897, 0.0637665, 0.0226532 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0751897, 0.183883, -0.0108006 )
 shape = SubResource( 7 )
