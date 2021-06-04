@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://imported_blender/69.material" type="Material" id=1]
 [ext_resource path="res://imported_blender/43.material" type="Material" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://imported_blender/75.material" type="Material" id=5]
 [ext_resource path="res://imported_blender/71.material" type="Material" id=6]
 [ext_resource path="res://scripts/tv (1).gd" type="Script" id=7]
+[ext_resource path="res://musik/tv_break.ogg" type="AudioStream" id=8]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -131,3 +132,6 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0751897, 0.183883, -0.0108006 )
 shape = SubResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )

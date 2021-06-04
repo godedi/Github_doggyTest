@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tv_break.ogg-3c302301531a0a9065dc78c6f230134a.oggstr"
+
+[deps]
+
+source_file="res://musik/tv_break.ogg"
+dest_files=[ "res://.import/tv_break.ogg-3c302301531a0a9065dc78c6f230134a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -13,8 +13,8 @@ emission_operator = 0
 emission_on_uv2 = false
 
 [sub_resource type="CylinderShape" id=3]
-radius = 0.0808479
-height = 0.0976967
+radius = 0.0354745
+height = 0.0406947
 
 [node name="Cake" type="Area"]
 script = ExtResource( 2 )
@@ -38,5 +38,5 @@ material/10 = null
 material/11 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0346626, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0257686, 0 )
 shape = SubResource( 3 )

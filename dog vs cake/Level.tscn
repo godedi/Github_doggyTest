@@ -246,10 +246,10 @@ shadow_enabled = true
 shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 
 [node name="Cake" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.824927, 1.45122, 4.51939 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.506123, 1.30782, 4.21286 )
 
 [node name="present" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.10275, 0.258851, -1.23371 )
+transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 6.73919, 0.258851, -0.0458679 )
 
 [node name="soffa" parent="." instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.52507, 0.110931, 1.72569 )
@@ -262,14 +262,14 @@ physics_material_override = SubResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.41015, 1.67443, 1.65321 )
 
 [node name="Grind" parent="." instance=ExtResource( 27 )]
-transform = Transform( 7.54982e-08, 0, -1, 0, 1.29188, 0, 1.11965, 0, 8.45314e-08, 4.01884, 0.0576421, 4.12791 )
+transform = Transform( 7.54982e-08, 0, -1, 0, 1.29188, 0, 2.05402, 0, 1.55075e-07, 4.01884, 0.0576421, 4.49543 )
 
 [node name="balloons" parent="." instance=ExtResource( 17 )]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 5.87979, 1.67248, -1.07075 )
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 5.93039, 1.69137, -1.32074 )
 script = ExtResource( 23 )
 
 [node name="Particles" type="Particles" parent="balloons"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0846567, 2.41637, 0.361436 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0846558, 2.41637, 0.361436 )
 material_override = SubResource( 5 )
 cast_shadow = 0
 lifetime = 3.39
@@ -282,10 +282,10 @@ draw_pass_1 = SubResource( 9 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.13785, 0.376255, 0 )
 
 [node name="turqoisePaket" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2488, 0.528309, 1.29481 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.77339, 0.528309, 0.516889 )
 
 [node name="vas" parent="." instance=ExtResource( 31 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.32207, 1.11717, 0.358105 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.32207, 1.09788, 0.358105 )
 
 [node name="destruction" type="Node" parent="vas"]
 script = ExtResource( 33 )
@@ -317,7 +317,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5379, 1.77042, -0.724171 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="kakburk5" type="Spatial" parent="Cookies"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02221, 1.04784, 4.09618 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02221, 1.23017, 4.08387 )
 
 [node name="cookie" parent="Cookies/kakburk5" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -329,7 +329,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42502, 0.133156, 2.68201 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="kakburk7" type="Spatial" parent="Cookies"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50366, 0.867292, -0.0848818 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50366, 0.99737, -0.0848818 )
 
 [node name="cookie" parent="Cookies/kakburk7" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -426,13 +426,13 @@ transform = Transform( 3.99985, 0, 0.0340689, 0, 4, 0, -0.0340689, 0, 3.99985, 3
 transform = Transform( 3.56271, 0, 0, 0, 3.50112, 0, 0, 0, 4.19437, 4.61389, 0.110721, -1.19164 )
 
 [node name="koksbord" parent="." instance=ExtResource( 21 )]
-transform = Transform( -4.99967, 0, -0.0457969, 0, 5, 0, 0.0572462, 0, -3.99974, -0.579971, 0.0784913, 4.57409 )
+transform = Transform( -4.99967, 0, -0.0457969, 0, 4.56342, 0, 0.0572462, 0, -3.99974, -0.579971, 0.0419637, 4.27069 )
 
 [node name="matta (4)" parent="." instance=ExtResource( 37 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.72471, 0.0509653, 3.06183 )
 
 [node name="skrappase" parent="." instance=ExtResource( 38 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90481, 0.267431, 0.323681 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.754957, 0.267431, 2.07149 )
 
 [node name="papperspase" parent="." instance=ExtResource( 25 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39955, 1.25485, 1.66692 )
@@ -452,16 +452,16 @@ transform = Transform( 0.999889, -0.0148697, 0, 0.0148697, 0.999889, 0, 0, 0, 1,
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39088, 0.973697, 1.63675 )
 
 [node name="stol" parent="." instance=ExtResource( 42 )]
-transform = Transform( 0.00586425, 0, 2.99999, 0, 4, 0, -2.99999, 0, 0.00586425, -1.93411, 0.754782, 4.14586 )
+transform = Transform( 0.0053271, 0, 2.8, 0, 2.8, 0, -2.8, 0, 0.0053271, -0.779529, 0.754782, 3.90393 )
 
 [node name="stol2" parent="." instance=ExtResource( 42 )]
-transform = Transform( 0.00586425, 0, 2.99999, 0, 4, 0, -2.99999, 0, 0.00586425, -0.805732, 0.754782, 4.14586 )
+transform = Transform( 0.0053271, 0, 2.8, 0, 2.8, 0, -2.8, 0, 0.0053271, -1.74339, 0.754782, 3.93541 )
 
 [node name="Monstera" parent="." instance=ExtResource( 18 )]
 transform = Transform( 0.977202, 0, -0.212314, 0, 1, 0, 0.212314, 0, 0.977202, 9.25214, 0, 2.97233 )
 
 [node name="kok" parent="." instance=ExtResource( 45 )]
-transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -2.00401, 0, -1.49078 )
+transform = Transform( 1.2, 0, 0, 0, 1.31311, 0, 0, 0, 1.2, -2.00401, 0, -1.49078 )
 
 [node name="vimplar" parent="." instance=ExtResource( 44 )]
 transform = Transform( 10, 0, 0, 0, 6, 0, 0, 0, 5, 7.1071, 1.8032, -1.48115 )
@@ -475,10 +475,10 @@ script = ExtResource( 33 )
 shard_scene = ExtResource( 47 )
 
 [node name="Micro" parent="." instance=ExtResource( 49 )]
-transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.54724, 1.13553, -1.58472 )
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.54724, 1.30687, -1.58472 )
 
 [node name="glas" parent="." instance=ExtResource( 52 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42402, 1.00928, -0.838646 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42402, 1.18053, -0.838646 )
 contacts_reported = 1
 contact_monitor = true
 
@@ -486,8 +486,17 @@ contact_monitor = true
 script = ExtResource( 33 )
 shard_scene = ExtResource( 53 )
 
+[node name="glas3" parent="." instance=ExtResource( 52 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.796153, 1.14356, -0.631752 )
+contacts_reported = 1
+contact_monitor = true
+
+[node name="Glas_Des" type="Node" parent="glas3"]
+script = ExtResource( 33 )
+shard_scene = ExtResource( 53 )
+
 [node name="glas2" parent="." instance=ExtResource( 52 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92065, 1.00928, -0.838646 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92065, 1.17495, -0.838646 )
 contacts_reported = 1
 contact_monitor = true
 
@@ -496,7 +505,7 @@ script = ExtResource( 33 )
 shard_scene = ExtResource( 53 )
 
 [node name="fat" parent="." instance=ExtResource( 51 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.991671, -1.10157 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.318338, 1.14078, -0.776962 )
 contacts_reported = 1
 contact_monitor = true
 
@@ -505,7 +514,7 @@ script = ExtResource( 33 )
 shard_scene = ExtResource( 32 )
 
 [node name="stacktallrikar" parent="." instance=ExtResource( 54 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5818, 1.05297, 0.787345 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41818, 1.14356, 0.787345 )
 contacts_reported = 1
 contact_monitor = true
 
@@ -513,8 +522,9 @@ contact_monitor = true
 script = ExtResource( 33 )
 shard_scene = ExtResource( 55 )
 [connection signal="body_entered" from="Cake" to="doggo" method="_on_Cake_body_entered"]
-[connection signal="body_entered" from="balloons" to="doggo" method="_on_balloons_body_entered"]
 [connection signal="body_entered" from="balloons" to="balloons" method="_on_balloons_body_entered"]
+[connection signal="body_entered" from="balloons" to="doggo" method="_on_balloons_body_entered"]
+[connection signal="body_entered" from="vas" to="livingRoomFloor" method="_on_vas_body_entered"]
 [connection signal="body_entered" from="Cookies/kakburk/cookie" to="Cookies/kakburk/cookie" method="_on_cookie_body_entered"]
 [connection signal="cookieCollected" from="Cookies/kakburk/cookie" to="Control/Counter" method="_on_cookie_cookieCollected"]
 [connection signal="body_entered" from="Cookies/kakburk2/cookie" to="Cookies/kakburk2/cookie" method="_on_cookie_body_entered"]
@@ -538,6 +548,7 @@ shard_scene = ExtResource( 55 )
 [connection signal="body_entered" from="tv " to="tv " method="_on_tv__body_entered"]
 [connection signal="body_entered" from="kartong" to="kartong" method="_on_kartong_body_entered"]
 [connection signal="body_entered" from="glas" to="glas" method="_on_glas_body_entered"]
+[connection signal="body_entered" from="glas3" to="glas3" method="_on_glas_body_entered"]
 [connection signal="body_entered" from="glas2" to="glas2" method="_on_glas_body_entered"]
 [connection signal="body_entered" from="fat" to="fat" method="_on_fat_body_entered"]
 [connection signal="body_entered" from="stacktallrikar" to="stacktallrikar" method="_on_stacktallrikar_body_entered"]

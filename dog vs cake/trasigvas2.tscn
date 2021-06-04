@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://imported_blender/193.material" type="Material" id=1]
 [ext_resource path="res://imported_blender/187.material" type="Material" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://imported_blender/149.material" type="Material" id=22]
 [ext_resource path="res://imported_blender/189.material" type="Material" id=23]
 [ext_resource path="res://imported_blender/183.material" type="Material" id=24]
+[ext_resource path="res://musik/kruk_kras.ogg" type="AudioStream" id=25]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "node_id8"
@@ -483,3 +484,6 @@ material/0 = null
 [node name="node_id77" type="MeshInstance" parent="."]
 mesh = SubResource( 24 )
 material/0 = null
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )

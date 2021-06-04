@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cake_splat.ogg-20117e6d75a9fa6b60b8e3ae59963b0b.oggstr"
+
+[deps]
+
+source_file="res://musik/cake_splat.ogg"
+dest_files=[ "res://.import/cake_splat.ogg-20117e6d75a9fa6b60b8e3ae59963b0b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

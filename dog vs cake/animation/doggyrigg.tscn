@@ -2970,7 +2970,7 @@ start_node = "Idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=25]
 
 [sub_resource type="BoxShape" id=26]
-extents = Vector3( 0.141748, 0.908623, 0.0949926 )
+extents = Vector3( 0.141748, 0.796882, 0.0949926 )
 
 [node name="doggyrigg" type="KinematicBody"]
 script = ExtResource( 9 )
@@ -3216,7 +3216,7 @@ active = true
 parameters/playback = SubResource( 25 )
 
 [node name="Collision_balloon" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.868666, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.779331, 0 )
 shape = SubResource( 26 )
 disabled = true
 

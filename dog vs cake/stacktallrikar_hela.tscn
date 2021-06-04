@@ -90,30 +90,30 @@ height = 0.117802
 script = ExtResource( 1 )
 
 [node name="t-1" type="MeshInstance" parent="."]
-transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, -3.37585e-08, -0.0517976, 0.256 )
+transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 
 [node name="t-2" type="MeshInstance" parent="."]
-transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, -3.37585e-08, -0.0517976, 0.256 )
+transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="t-3" type="MeshInstance" parent="."]
-transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, -3.37585e-08, -0.0517976, 0.256 )
+transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, 0, 0, 0 )
 mesh = SubResource( 3 )
 material/0 = null
 
 [node name="t-4" type="MeshInstance" parent="."]
-transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, -3.37585e-08, -0.0517976, 0.256 )
+transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, 0, 0, 0 )
 mesh = SubResource( 4 )
 material/0 = null
 
 [node name="t-5" type="MeshInstance" parent="."]
-transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, -3.37585e-08, -0.0517976, 0.256 )
+transform = Transform( 0.262785, 0, 0, 0, 0.262785, 0, 0, 0, 0.262785, 0, 0, 0 )
 mesh = SubResource( 5 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.247809 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0827801, 0 )
 shape = SubResource( 6 )
