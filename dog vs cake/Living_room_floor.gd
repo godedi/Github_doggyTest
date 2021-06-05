@@ -1,14 +1,22 @@
 extends StaticBody
 
+var vasSound = false
+var tvSound = false
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("livingRoomFloor")
 
 
 
+
+
+func _on_vas_body_entered(body):
+	if body.is_in_group("livingRoomFloor") and vasSound == false:
+		$krukKras.play()
+		vasSound = true
+
+
+func _on_tv__body_entered(body):
+	if body.is_in_group("livingRoomFloor") and tvSound == false:
+		$TvBreak.play()
+		tvSound = true

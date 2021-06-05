@@ -11,6 +11,4 @@ func _ready():
 	add_to_group("bodies")
 
 
-func _on_stacktallrikar_body_entered(body):
-	if body.is_in_group("kitchenFloor"):
-		get_node("Tall_Des").destroy()
+

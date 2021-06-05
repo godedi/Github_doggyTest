@@ -1,11 +1,18 @@
 extends StaticBody
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var glasSound = false
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("kitchenFloor")
+
+
+
+	
+
+
+func _on_glas_body_entered(body):
+	if body.is_in_group("kitchenFloor") and glasSound == false:
+		$GlasKras.play()
+		glasSound = true

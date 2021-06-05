@@ -1,4 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://musik/glas_krash_big.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Kitchen_floor.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 15 )
@@ -47,6 +50,7 @@ size = Vector3( 30, 2, 30 )
 
 [node name="KitchenFloor2" type="StaticBody"]
 transform = Transform( 0.45613, 0, 0, 0, 0.080468, 0, 0, 0, 0.589639, -6.27796, -0.0264707, 0 )
+script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32474, -0.227437, -0.964581 )
@@ -56,3 +60,6 @@ shape = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34058, -0.320074, -1.06837 )
 mesh = SubResource( 7 )
 material/0 = null
+
+[node name="GlasKras" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
