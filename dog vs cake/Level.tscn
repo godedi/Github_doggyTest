@@ -151,42 +151,42 @@ bounce = -2.0
 use_collision = true
 
 [node name="walls2" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1.129, 0, 0, 0, 1.23, 0, 0, 0, 1.4, -2.10312, 1.35661, 2.22078 )
+transform = Transform( 1.129, 0, 0, 0, 1.3539, 0, 0, 0, 1.4, -2.10312, 1.35661, 2.22078 )
 width = 0.139676
 height = 2.3825
 depth = 5.38291
 material = ExtResource( 4 )
 
 [node name="walls3" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1.129, 0, 0, 0, 1.23, 0, 0, 0, 1.4, 9.88179, 1.35661, 2.22078 )
+transform = Transform( 1.129, 0, 0, 0, 1.36546, 0, 0, 0, 1.4, 9.88179, 1.35661, 2.22078 )
 width = 0.139676
 height = 2.3825
 depth = 5.38291
 material = ExtResource( 32 )
 
 [node name="roof" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( -4.93502e-08, -1.23, 0, 1.129, -5.3765e-08, 0, 0, 0, 1.4, 3.91228, 2.88116, 1.7873 )
+transform = Transform( -4.77088e-08, -1.18909, 0, 1.129, -5.3765e-08, 0, 0, 0, 1.4, 3.91228, 2.9972, 1.7873 )
 width = 0.139676
 height = 10.1423
 depth = 6.56011
 material = ExtResource( 32 )
 
 [node name="walls5" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 1.129, 0, 0, 0, 1.23, 0, 0, 0, 1.4, 4.02577, 1.35661, 0.649709 )
+transform = Transform( 1.129, 0, 0, 0, 1.28391, 0, 0, 0, 1.4, 4.02577, 1.35661, 0.649709 )
 width = 0.139676
 height = 2.71498
 depth = 4.31339
 material = ExtResource( 32 )
 
 [node name="walls4" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( -6.11959e-08, 0, -1.4, 0, 1.23, 0, 1.4, 0, -6.11959e-08, 0.889834, 1.35661, -1.93927 )
+transform = Transform( -6.11959e-08, 0, -1.4, 0, 1.33448, 0, 1.4, 0, -6.11959e-08, 0.889834, 1.35661, -1.93927 )
 width = 0.624917
 height = 2.3825
 depth = 4.42062
 material = ExtResource( 4 )
 
 [node name="walls6" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( -6.11959e-08, 0, -1.4, 0, 1.23, 0, 1.4, 0, -6.11959e-08, 7.00744, 1.35661, -1.92007 )
+transform = Transform( -6.11959e-08, 0, -1.4, 0, 1.33109, 0, 1.4, 0, -6.11959e-08, 7.00744, 1.35661, -1.92007 )
 width = 0.624917
 height = 2.42891
 depth = 4.25546
@@ -207,7 +207,7 @@ height = 9.42589
 depth = 5.27126
 
 [node name="window5" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( 0.786273, 0, 0, 0, 0.13978, 0.00133208, 0, -0.00245226, 0.257326, 3.79949, 2.14735, -1.10813 )
+transform = Transform( 0.786273, 0, 0, 0, 0.13978, 0.00133208, 0, -0.00245226, 0.257326, 3.79949, 2.04426, -1.10813 )
 operation = 2
 width = 1.099
 height = 4.08465
@@ -448,10 +448,10 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.56282
 transform = Transform( 0.128472, 0, 1.99587, 0, 2, 0, -1.99587, 0, 0.128472, 8.86189, 0.562948, 0.220107 )
 
 [node name="kylskåp" parent="." instance=ExtResource( 14 )]
-transform = Transform( 3.99985, 0, 0.0340689, 0, 4, 0, -0.0340689, 0, 3.99985, 3.40455, 0.944937, -2.01911 )
+transform = Transform( 3.99985, 0, 0.0340689, 0, 3.57949, 0, -0.0340689, 0, 3.99985, 3.40455, 0.836132, -2.01911 )
 
 [node name="bokhyllautan_vaxt" parent="." instance=ExtResource( 8 )]
-transform = Transform( 3.56271, 0, 0, 0, 3.50112, 0, 0, 0, 4.19437, 4.61389, 0.110721, -1.19164 )
+transform = Transform( 3.56271, 0, 0, 0, 3.26769, 0, 0, 0, 4.19437, 4.61389, 0.110721, -1.19164 )
 
 [node name="koksbord" parent="." instance=ExtResource( 21 )]
 transform = Transform( -4.99967, 0, -0.0457969, 0, 4.56342, 0, 0.0572462, 0, -3.99974, -0.579971, 0.0419637, 4.27069 )
@@ -492,7 +492,7 @@ transform = Transform( 0.977202, 0, -0.212314, 0, 1, 0, 0.212314, 0, 0.977202, 9
 transform = Transform( 1.2, 0, 0, 0, 1.31311, 0, 0, 0, 1.2, -2.00401, 0, -1.49078 )
 
 [node name="kartong" parent="." instance=ExtResource( 48 )]
-transform = Transform( -1.95505e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, -1.95505e-07, 3.96155, 1.85698, -1.08834 )
+transform = Transform( -1.95505e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, -1.95505e-07, 3.96155, 1.73967, -1.08834 )
 script = ExtResource( 46 )
 
 [node name="Kartong_Des" type="Node" parent="kartong"]
@@ -500,7 +500,7 @@ script = ExtResource( 33 )
 shard_scene = ExtResource( 47 )
 
 [node name="Micro" parent="." instance=ExtResource( 49 )]
-transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.54724, 1.30687, -1.58472 )
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.54845, 1.24788, -1.58472 )
 
 [node name="glas" parent="." instance=ExtResource( 52 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42402, 1.18053, -0.838646 )
@@ -575,7 +575,7 @@ contact_monitor = true
 [connection signal="body_entered" from="tv " to="livingRoomFloor" method="_on_tv__body_entered"]
 [connection signal="body_entered" from="tv " to="tv " method="_on_tv__body_entered"]
 [connection signal="body_entered" from="kartong" to="kartong" method="_on_kartong_body_entered"]
-[connection signal="body_entered" from="glas" to="glas" method="_on_glas_body_entered"]
 [connection signal="body_entered" from="glas" to="KitchenFloor" method="_on_glas_body_entered"]
+[connection signal="body_entered" from="glas" to="glas" method="_on_glas_body_entered"]
 [connection signal="body_entered" from="glas3" to="glas3" method="_on_glas_body_entered"]
 [connection signal="body_entered" from="glas2" to="glas2" method="_on_glas_body_entered"]
