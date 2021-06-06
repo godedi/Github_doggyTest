@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://gun A.tscn" type="PackedScene" id=1]
 [ext_resource path="res://animation/doggyrigg.tscn" type="PackedScene" id=2]
@@ -56,6 +56,9 @@
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 12.0718, 1, 8.66988 )
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 1.90229, 1, 0.337559 )
 
 [sub_resource type="PanoramaSky" id=2]
 panorama = ExtResource( 26 )
@@ -238,9 +241,12 @@ shape = SubResource( 1 )
 transform = Transform( -6.68889e-08, -0.259292, -7.6081e-08, 0, -5.63357e-09, 0.865129, -1.13942, 8.43931e-09, 2.47625e-15, 17.1776, -1.52055, 9.36247 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape4" type="CollisionShape" parent="Spatial"]
-transform = Transform( 1.53024, -1.50983e-08, -3.59971e-15, 0, -5.63357e-09, 0.865129, -8.99376e-08, -0.193069, -5.665e-08, -1.96413, -1.52055, -4.77282 )
-shape = SubResource( 1 )
+[node name="fönstercollison" type="StaticBody" parent="."]
+transform = Transform( -0.370104, 0, 0, 0, -0.744602, 0, 0, 0, 0.49705, 3.90666, 1.84523, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="fönstercollison"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.04153, 0, -3.28976 )
+shape = SubResource( 19 )
 
 [node name="doggo" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.62116, 0.181666, 4.40225 )
