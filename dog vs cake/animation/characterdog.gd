@@ -8,7 +8,7 @@ var gravity = 27
 var jump_magnitude = 6
 
 var movement_speed = 0
-var walk_speed = 3.5
+var walk_speed = 3.2
 var acceleration = 4
 var angular_acceleration = 7 
 var push = 0.8
@@ -88,6 +88,7 @@ func _on_balloons_body_entered(body):
 		flyingDog = true
 		if flyingDog == true:
 			dogGravity = false
+			walk_speed = 2.3
 	if dogGravity == false:
 		state_machine.travel("Flying")
 		$"Camera1".set_target($"Armature/2")
