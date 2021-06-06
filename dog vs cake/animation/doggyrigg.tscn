@@ -3187,7 +3187,7 @@ transform = Transform( 0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 1.09409, -0.518
 visible = false
 
 [node name="CameraTarget1" type="Spatial" parent="Armature"]
-transform = Transform( 1.13232e-08, 0.313628, -0.949546, -3.73998e-09, 0.949546, 0.313628, 1, 0, 1.19249e-08, -1.51582, 0.937117, 0 )
+transform = Transform( 1.13232e-08, 0.313628, -0.949546, -3.73998e-09, 0.949546, 0.313628, 1, 0, 1.19249e-08, -1.38563, 0.850798, 0 )
 script = ExtResource( 12 )
 
 [node name="2" type="Spatial" parent="Armature"]
