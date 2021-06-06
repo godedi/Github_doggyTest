@@ -162,10 +162,10 @@ depth = 5.38291
 material = ExtResource( 32 )
 
 [node name="roof" type="CSGBox" parent="CSGCombiner"]
-transform = Transform( -4.93502e-08, -1.23, 0, 1.129, -5.3765e-08, 0, 0, 0, 1.4, 3.91228, 2.88116, 1.64616 )
+transform = Transform( -4.93502e-08, -1.23, 0, 1.129, -5.3765e-08, 0, 0, 0, 1.4, 3.91228, 2.88116, 1.7873 )
 width = 0.139676
-height = 9.69255
-depth = 5.80764
+height = 10.1423
+depth = 6.56011
 material = ExtResource( 32 )
 
 [node name="walls5" type="CSGBox" parent="CSGCombiner"]
@@ -232,6 +232,14 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Spatial"]
 transform = Transform( 1.53024, 0, 0, 0, -5.63357e-09, 0.865129, 0, -0.193069, -5.665e-08, 0, -1.52055, 9.36247 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Spatial"]
+transform = Transform( -6.68889e-08, -0.259292, -7.6081e-08, 0, -5.63357e-09, 0.865129, -1.13942, 8.43931e-09, 2.47625e-15, 17.1776, -1.52055, 9.36247 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Spatial"]
+transform = Transform( 1.53024, -1.50983e-08, -3.59971e-15, 0, -5.63357e-09, 0.865129, -8.99376e-08, -0.193069, -5.665e-08, -1.96413, -1.52055, -4.77282 )
 shape = SubResource( 1 )
 
 [node name="doggo" parent="." instance=ExtResource( 2 )]
