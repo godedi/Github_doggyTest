@@ -1,51 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://musik/glas_krash_big.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Kitchen_floor.gd" type="Script" id=2]
+[ext_resource path="res://tapet o golv/Material_004.material" type="Material" id=3]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 15 )
 
-[sub_resource type="Image" id=8]
-data = {
-"data": PoolByteArray( 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255 ),
-"format": "RGBA8",
-"height": 8,
-"mipmaps": false,
-"width": 8
-}
-
-[sub_resource type="ImageTexture" id=3]
-image = SubResource( 8 )
-size = Vector2( 8, 8 )
-
-[sub_resource type="Image" id=9]
-data = {
-"data": PoolByteArray( 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255, 0, 127, 0, 255 ),
-"format": "RGBA8",
-"height": 8,
-"mipmaps": false,
-"width": 8
-}
-
-[sub_resource type="ImageTexture" id=5]
-image = SubResource( 9 )
-size = Vector2( 8, 8 )
-
-[sub_resource type="SpatialMaterial" id=6]
-resource_name = "63"
-params_cull_mode = 2
-params_use_alpha_scissor = true
-params_alpha_scissor_threshold = 0.5
-albedo_color = Color( 0.501961, 0.501961, 0.501961, 1 )
-metallic = 1.0
-metallic_texture = SubResource( 3 )
-metallic_texture_channel = 2
-roughness_texture = SubResource( 5 )
-roughness_texture_channel = 1
-
-[sub_resource type="CubeMesh" id=7]
-material = SubResource( 6 )
+[sub_resource type="CubeMesh" id=2]
 size = Vector3( 30, 2, 30 )
 
 [node name="KitchenFloor2" type="StaticBody"]
@@ -58,8 +20,8 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34058, -0.320074, -1.06837 )
-mesh = SubResource( 7 )
-material/0 = null
+mesh = SubResource( 2 )
+material/0 = ExtResource( 3 )
 
 [node name="GlasKras" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
