@@ -249,7 +249,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.04153, 0, -3.28976 )
 shape = SubResource( 2 )
 
 [node name="doggo" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84975, 0.181666, 2.18683 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.33308, 0.289903, 4.14655 )
 
 [node name="ljussättning" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
@@ -262,7 +262,7 @@ shadow_enabled = true
 shadow_color = Color( 0.6, 0.6, 0.6, 1 )
 
 [node name="Cake" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.506123, 1.30782, 4.21286 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.506123, 1.53682, 4.21286 )
 
 [node name="present" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 6.49056, 0.258851, 0.492769 )
@@ -283,11 +283,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.53143, 1.10288, -1.50438 )
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.52507, 0.110931, 1.72569 )
 
 [node name="Trashcannolid" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, -7.35137e-08, 0, 7.35137e-08, 1, 0, 0, 0, 1, 3.35931, 0.681039, 1.6306 )
+transform = Transform( 1, -7.35137e-08, 0, 7.35137e-08, 1, 0, 0, 0, 1, 3.35931, 0.31905, 1.6306 )
 physics_material_override = SubResource( 5 )
 
 [node name="Trashcan-lid" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.41015, 1.67443, 1.65321 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36038, 0.728563, 1.65321 )
 
 [node name="Grind" parent="." instance=ExtResource( 27 )]
 transform = Transform( 1.55074e-07, 0, -1, 0, 1.29188, 0, 2.92011, 0, 1.07332e-07, 4.01884, 0.0576421, 4.81887 )
@@ -455,7 +455,7 @@ transform = Transform( 3.99985, 0, 0.0340689, 0, 3.57949, 0, -0.0340689, 0, 3.99
 transform = Transform( 3.56271, 0, 0, 0, 3.26769, 0, 0, 0, 4.19437, 4.61389, 0.110721, -1.19164 )
 
 [node name="koksbord" parent="." instance=ExtResource( 21 )]
-transform = Transform( -4.99967, 0, -0.0457969, 0, 4.56342, 0, 0.0572462, 0, -3.99974, -0.579971, 0.0419637, 4.27069 )
+transform = Transform( -4.99967, 0, -0.0457969, 0, 5.40538, 0, 0.0572462, 0, -3.99974, -0.579971, 0.0419637, 4.27069 )
 
 [node name="matta (4)" parent="." instance=ExtResource( 37 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.72471, 0.0509653, 3.06183 )
@@ -464,27 +464,27 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.72471, 0.0509653, 3.06183 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.754957, 0.267431, 2.07149 )
 
 [node name="papperspase" parent="." instance=ExtResource( 25 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39955, 1.25485, 1.66692 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39955, 0.686385, 1.65619 )
 physics_material_override = SubResource( 18 )
 
 [node name="tomburk" parent="." instance=ExtResource( 36 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35021, 1.3753, 1.81727 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35021, 0.26221, 1.64639 )
 physics_material_override = SubResource( 19 )
 
 [node name="bananskal" parent="." instance=ExtResource( 40 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54243, 0.879287, 0.590102 )
 
 [node name="appelskrutt" parent="." instance=ExtResource( 39 )]
-transform = Transform( 0.999889, -0.0148697, 0, 0.0148697, 0.999889, 0, 0, 0, 1, 3.3778, 0.673684, 1.60754 )
+transform = Transform( 0.999889, -0.0148697, 0, 0.0148697, 0.999889, 0, 0, 0, 1, 3.3778, 0.448707, 1.60754 )
 
 [node name="servett" parent="." instance=ExtResource( 41 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39088, 0.973697, 1.63675 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39088, 0.543834, 1.63033 )
 
 [node name="stol" parent="." instance=ExtResource( 42 )]
-transform = Transform( 0.0053271, 0, 2.8, 0, 2.8, 0, -2.8, 0, 0.0053271, -0.779529, 0.754782, 3.90393 )
+transform = Transform( 0.0053271, 0, 2.8, 0, 3.33532, 0, -2.8, 0, 0.0053271, -0.779529, 0.754782, 3.81767 )
 
 [node name="stol2" parent="." instance=ExtResource( 42 )]
-transform = Transform( 0.0053271, 0, 2.8, 0, 2.8, 0, -2.8, 0, 0.0053271, -1.74339, 0.754782, 3.93541 )
+transform = Transform( 0.0053271, 0, 2.8, 0, 3.22711, 0, -2.8, 0, 0.0053271, -1.74339, 0.754782, 3.82463 )
 
 [node name="Monstera" parent="." instance=ExtResource( 18 )]
 transform = Transform( 0.977202, 0, -0.212314, 0, 1, 0, 0.212314, 0, 0.977202, 9.25214, 0, 2.97233 )
@@ -550,8 +550,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57003, 1.37565, 0.475541 )
 contacts_reported = 1
 contact_monitor = true
 [connection signal="body_entered" from="Cake" to="doggo" method="_on_Cake_body_entered"]
-[connection signal="body_entered" from="balloons" to="doggo" method="_on_balloons_body_entered"]
 [connection signal="body_entered" from="balloons" to="balloons" method="_on_balloons_body_entered"]
+[connection signal="body_entered" from="balloons" to="doggo" method="_on_balloons_body_entered"]
 [connection signal="body_entered" from="vas" to="livingRoomFloor" method="_on_vas_body_entered"]
 [connection signal="body_entered" from="Cookies/kakburk/cookie" to="Cookies/kakburk/cookie" method="_on_cookie_body_entered"]
 [connection signal="cookieCollected" from="Cookies/kakburk/cookie" to="Control/Counter" method="_on_cookie_cookieCollected"]
@@ -573,10 +573,12 @@ contact_monitor = true
 [connection signal="cookieCollected" from="Cookies/kakburk9/cookie" to="Control/Counter" method="_on_cookie_cookieCollected"]
 [connection signal="body_entered" from="Cookies/kakburk10/cookie" to="Cookies/kakburk10/cookie" method="_on_cookie_body_entered"]
 [connection signal="cookieCollected" from="Cookies/kakburk10/cookie" to="Control/Counter" method="_on_cookie_cookieCollected"]
-[connection signal="body_entered" from="tv " to="tv " method="_on_tv__body_entered"]
 [connection signal="body_entered" from="tv " to="livingRoomFloor" method="_on_tv__body_entered"]
+[connection signal="body_entered" from="tv " to="tv " method="_on_tv__body_entered"]
 [connection signal="body_entered" from="kartong" to="kartong" method="_on_kartong_body_entered"]
 [connection signal="body_entered" from="glas" to="KitchenFloor" method="_on_glas_body_entered"]
 [connection signal="body_entered" from="glas" to="glas" method="_on_glas_body_entered"]
+[connection signal="body_entered" from="glas3" to="KitchenFloor" method="_on_glas3_body_entered"]
 [connection signal="body_entered" from="glas3" to="glas3" method="_on_glas_body_entered"]
+[connection signal="body_entered" from="glas2" to="KitchenFloor" method="_on_glas2_body_entered"]
 [connection signal="body_entered" from="glas2" to="glas2" method="_on_glas_body_entered"]

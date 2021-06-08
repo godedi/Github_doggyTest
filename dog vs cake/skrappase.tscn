@@ -23,7 +23,7 @@ radius = 0.286515
 height = 0.379097
 
 [node name="skrappase" type="RigidBody"]
-mass = 6.0
+mass = 2.67
 gravity_scale = 3.0
 script = ExtResource( 2 )
 

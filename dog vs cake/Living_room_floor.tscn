@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Living_room_floor.gd" type="Script" id=1]
 [ext_resource path="res://musik/kruk_kras.ogg" type="AudioStream" id=2]
-[ext_resource path="res://musik/tv_break.ogg" type="AudioStream" id=3]
+[ext_resource path="res://tv_break.ny.ogg" type="AudioStream" id=3]
 [ext_resource path="res://tapet o golv/Material_004.material" type="Material" id=4]
 
 [sub_resource type="BoxShape" id=1]
@@ -26,6 +26,8 @@ material/0 = ExtResource( 4 )
 
 [node name="krukKras" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -8.078
 
 [node name="TvBreak" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -4.039

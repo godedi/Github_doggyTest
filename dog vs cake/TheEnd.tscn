@@ -1,54 +1,40 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Button.gd" type="Script" id=1]
 [ext_resource path="res://Rich Eatin'.otf" type="DynamicFontData" id=2]
-
+[ext_resource path="res://pomy2.jpg" type="Texture" id=3]
+[ext_resource path="res://musik/cake_splat.ogg" type="AudioStream" id=4]
+[ext_resource path="res://TheEnd.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 150
-outline_size = 6
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 40
+size = 52
+outline_color = Color( 1, 0.843137, 0.843137, 1 )
 font_data = ExtResource( 2 )
 
 [node name="TheEnd" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1025.0
-margin_bottom = 598.0
-color = Color( 0.0392157, 0.0901961, 0.0431373, 1 )
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 3 )
+stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Label" type="Label" parent="."]
-margin_left = -1.33484
-margin_top = 185.543
-margin_right = 1024.67
-margin_bottom = 419.543
-rect_rotation = -8.22802
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 1, 0.482353, 0.156863, 1 )
-custom_colors/font_outline_modulate = Color( 0.772549, 0.533333, 0.533333, 1 )
-custom_colors/font_color_shadow = Color( 0.0588235, 0.0196078, 0.0196078, 1 )
-text = "Yuumy!!"
-align = 1
-valign = 1
 
 [node name="Button-end-again" type="Button" parent="."]
-margin_left = 746.175
-margin_top = 463.189
-margin_right = 1011.18
-margin_bottom = 584.189
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin_left = 6.67413
+margin_top = 6.67401
+margin_right = 346.674
+margin_bottom = 127.674
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.6, 0.85098, 0.952941, 1 )
 custom_colors/font_color_hover = Color( 0.964706, 0.419608, 0.419608, 1 )
 custom_colors/font_color_pressed = Color( 0.215686, 0.952941, 0.152941, 1 )
 text = "PLAY AGAIN?"
@@ -57,4 +43,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -4.039
 [connection signal="pressed" from="Button-end-again" to="Button-end-again" method="_on_Button_pressed"]

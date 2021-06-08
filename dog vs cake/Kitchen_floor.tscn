@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://musik/glas_krash_big.ogg" type="AudioStream" id=1]
+[ext_resource path="res://musik/glas_krash_big_2.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Kitchen_floor.gd" type="Script" id=2]
 [ext_resource path="res://tapet o golv/Material_004.material" type="Material" id=3]
 
@@ -25,3 +25,4 @@ material/0 = ExtResource( 3 )
 
 [node name="GlasKras" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+volume_db = -3.029
